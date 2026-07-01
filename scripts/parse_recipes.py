@@ -90,6 +90,12 @@ IMAGE_OVERRIDES = {
     "Meats/Meat Pie.htm": "images/meat-pie.jpg",
 }
 
+# Ingredients the original card used in the directions but left off the list, with
+# amounts the family supplied. Appended to the parsed ingredient list.
+INGREDIENT_ADDITIONS = {
+    "Meats/Meat Pie.htm": [{"qty": "about 1 cup", "item": "mashed potatoes"}],
+}
+
 
 def categorize(rel_parts: list[str], title: str) -> str:
     p = [s.lower() for s in rel_parts]
@@ -398,6 +404,7 @@ def parse_file(path: Path) -> dict | None:
     rel_parts = path.relative_to(SRC).parts[:-1]
     source_file = str(path.relative_to(SRC))
     category = CATEGORY_OVERRIDES.get(source_file, categorize(list(rel_parts), title))
+    ingredients += INGREDIENT_ADDITIONS.get(source_file, [])
 
     return {
         "title": title,
