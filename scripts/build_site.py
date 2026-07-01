@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Generate the static site from data/recipes.json.
+Generate the static site from data/recipes.json (+ optional data/groups.json).
 
-Emits into site/:
-  index.html            home: search + category filter + full card grid
-  recipe/<slug>.html    one page per recipe (print-friendly, Recipe JSON-LD)
-  about.html            About Poppa (placeholder to fill in)
-  404.html, sitemap.xml, robots.txt, .nojekyll, favicon.svg
+recipes.json is the per-recipe source of truth. groups.json (built by
+build_groups.py) folds recipes that are versions of ONE dish together: the
+index shows one card per dish, the dish's page carries a version switcher with
+every version's exact ingredients/directions, and each folded recipe's old URL
+becomes a redirect to the dish page (so shared links keep working).
 
-Hand-authored assets (assets/style.css, assets/search.js) are left untouched.
-Re-runnable: safe to delete site/recipe and regenerate.
+Hand-authored assets (assets/style.css, assets/search.js, assets/recipe.js) are
+left untouched. Re-runnable: safe to delete site/recipe and regenerate.
 """
 from __future__ import annotations
 import json, html, shutil
@@ -19,12 +19,13 @@ from collections import Counter
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "recipes.json"
+GROUPS = ROOT / "data" / "groups.json"
 SITE = ROOT / "site"
 
 SITE_TITLE = "Poppa's Recipes"
 TAGLINE = "recipes worth keeping"
 BASE_URL = "https://baron-3dl.github.io/normans-kitchen"
-PATH_PREFIX = (urlsplit(BASE_URL).path.rstrip("/") or "") + "/"   # "/normans-kitchen/"
+PATH_PREFIX = (urlsplit(BASE_URL).path.rstrip("/") or "") + "/"
 
 CATEGORIES = [
     "Chicken & Poultry", "Beef", "Pork", "Meats", "Fish & Seafood", "Pasta",
@@ -36,7 +37,7 @@ CATEGORIES = [
 E = html.escape
 
 
-def favicon_svg() -> str:
+def favicon_svg():
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
         '<rect width="64" height="64" rx="10" fill="#f8f1e0"/>'
@@ -79,8 +80,6 @@ def head(title, desc, base, canonical, image="", extra_head=""):
 
 
 def header(base, current, compact=False):
-    # exactly one <h1> per page: the wordmark is the h1 on the home page; on
-    # recipe/about pages the page's own title is the h1, so the wordmark is a <p>.
     tag = "h1" if current == "home" else "p"
     nav = f"""<nav class="topnav" aria-label="Primary">
   <a href="{base}index.html"{' aria-current="page"' if current=='home' else ''}>All Recipes</a>
@@ -128,30 +127,9 @@ def search_signature(r):
     return " ".join(parts).lower()
 
 
-def card(r):
-    has_photo = bool(r.get("image"))
-    photo = ""
-    if has_photo:
-        photo = (f'<div class="card-photo"><img src="{E(r["image"])}" '
-                 f'alt="{E(r["title"])}" loading="lazy"></div>')
-    n_ing = sum(1 for i in r["ingredients"] if "item" in i)
-    meta = f'{n_ing} ingredient{"s" if n_ing != 1 else ""}'
-    sig = E(search_signature(r), quote=True)
-    return f"""<article class="card{' has-photo' if has_photo else ''}" data-category="{E(r['category'], quote=True)}" data-search="{sig}">
-  <a class="card-link" href="recipe/{E(r['slug'])}.html">
-    {photo}
-    <div class="card-body">
-      <span class="card-kicker">{E(r['category'])}</span>
-      <h2 class="card-title">{E(r['title'])}</h2>
-      <span class="card-meta">{meta}</span>
-    </div>
-  </a>
-</article>"""
-
-
-def clean_desc(r):
+def clean_desc(r, dish=None):
     items = [i["item"] for i in r["ingredients"] if "item" in i]
-    lead = f'Poppa\'s recipe for {r["title"]}'
+    lead = f'Poppa\'s recipe for {dish or r["title"]}'
     if r.get("category"):
         lead += f' ({r["category"]})'
     if items:
@@ -167,13 +145,11 @@ def clean_desc(r):
     return lead + "."
 
 
-def recipe_jsonld(r):
-    ings = [ing_line(i) for i in r["ingredients"] if "item" in i]  # skip heading rows
+def recipe_jsonld(r, dish=None):
+    ings = [ing_line(i) for i in r["ingredients"] if "item" in i]
     data = {
-        "@context": "https://schema.org",
-        "@type": "Recipe",
-        "name": r["title"],
-        "recipeCategory": r["category"],
+        "@context": "https://schema.org", "@type": "Recipe",
+        "name": dish or r["title"], "recipeCategory": r["category"],
         "recipeIngredient": ings,
         "recipeInstructions": [{"@type": "HowToStep", "text": s} for s in r["steps"]],
         "url": f'{BASE_URL}/recipe/{r["slug"]}.html',
@@ -188,55 +164,34 @@ def recipe_jsonld(r):
     return f'<script type="application/ld+json">{payload}</script>\n'
 
 
-def build_index(recipes):
-    counts = Counter(r["category"] for r in recipes)
-    chips = "\n".join(
-        f'<button class="chip" data-cat="{E(c, quote=True)}" aria-pressed="false">'
-        f'{E(c)} <span class="count">{counts[c]}</span></button>'
-        for c in CATEGORIES if counts.get(c)
-    )
-    magnifier = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" '
-                 'stroke="currentColor" stroke-width="2" aria-hidden="true">'
-                 '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>')
-    cards = "\n".join(card(r) for r in recipes)
-    desc = (f"{len(recipes)} of Poppa's recipes — chicken, meats, desserts, cookies, "
-            "salads, soups and more, gathered for the family.")
-    return (
-        head(SITE_TITLE, desc, "", BASE_URL + "/")
-        + header("", "home")
-        + f"""<main id="main" class="wrap">
-  <div class="controls">
-    <div class="search-box">
-      {magnifier}
-      <input id="search" type="search" placeholder="Search {len(recipes)} recipes — try “chicken”, “cabbage”, “chocolate”…" aria-label="Search recipes by name, category, or ingredient" autocomplete="off">
+# ---------------------------------------------------------------- cards
+def card(title, href, category, search_sig, image, meta, is_group=False):
+    photo = (f'<div class="card-photo"><img src="{E(image)}" alt="{E(title)}" loading="lazy"></div>'
+             if image else "")
+    ribbon = '<span class="card-ribbon">versions</span>' if is_group else ""
+    meta_cls = "card-meta group" if is_group else "card-meta"
+    sig = E(search_sig, quote=True)
+    return f"""<article class="card{' has-photo' if image else ''}{' is-group' if is_group else ''}" data-category="{E(category, quote=True)}" data-search="{sig}">
+  <a class="card-link" href="{E(href)}">
+    {photo}{ribbon}
+    <div class="card-body">
+      <span class="card-kicker">{E(category)}</span>
+      <h2 class="card-title">{E(title)}</h2>
+      <span class="{meta_cls}">{E(meta)}</span>
     </div>
-    <div class="category-bar" role="group" aria-label="Filter by category">
-      {chips}
-    </div>
-    <p class="result-meta" id="result-meta" role="status" aria-live="polite" aria-atomic="true">{len(recipes)} recipes in the collection</p>
-  </div>
-
-  <div class="recipe-grid" id="recipe-grid">
-    {cards}
-    <p class="no-results" id="no-results" role="status" style="display:none">No recipes match — try another word.</p>
-  </div>
-</main>
-"""
-        + footer("")
-        + '\n<script src="assets/search.js"></script>\n'
-    )
+  </a>
+</article>"""
 
 
-def build_recipe(r):
-    base = "../"
+# ------------------------------------------------------- recipe body render
+def render_body(r, base, section_id=None, label=None, active=True):
     ing_html = []
     for i in r["ingredients"]:
         if "heading" in i:
             ing_html.append(f'<li class="ing-heading">{E(i["heading"])}</li>')
         else:
             qty = E(i.get("qty", ""))
-            item = E(i.get("item", ""))
-            ing_html.append(f'<li><span class="qty">{qty}</span><span class="item">{item}</span></li>')
+            ing_html.append(f'<li><span class="qty">{qty}</span><span class="item">{E(i.get("item",""))}</span></li>')
     ingredients = "\n".join(ing_html)
 
     steps = r["steps"]
@@ -251,25 +206,16 @@ def build_recipe(r):
     if r.get("source"):
         parts.append(f'<p class="source">Source: {E(r["source"])}</p>')
     if parts:
-        notes_block = ('<section class="recipe-notes"><h3>Notes</h3>\n'
-                       + "\n".join(parts) + '</section>')
+        notes_block = '<section class="recipe-notes"><h3>Notes</h3>\n' + "\n".join(parts) + '</section>'
 
-    image_url = f'{BASE_URL}/{r["image"]}' if r.get("image") else ""
     photo = f'<img class="recipe-photo" src="{base}{E(r["image"])}" alt="{E(r["title"])}">' if r.get("image") else ""
     servings = f'<p class="recipe-servings">{E(r["servings"])}</p>' if r.get("servings") else ""
+    ver_title = f'<h2 class="version-title">{E(label)}</h2>' if label else ""
+    attrs = f' id="{section_id}"' if section_id else ""
+    cls = "version" if section_id else "version single"
 
-    desc = clean_desc(r)
-    canonical = f'{BASE_URL}/recipe/{r["slug"]}.html'
-
-    return (
-        head(f'{r["title"]} — {SITE_TITLE}', desc, base, canonical,
-             image=image_url, extra_head=recipe_jsonld(r))
-        + header(base, "", compact=True)
-        + f"""<main id="main" class="wrap">
-  <article class="recipe">
-    <p class="breadcrumb"><a href="{base}index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="{base}index.html?c={quote(r['category'])}">{E(r['category'])}</a></p>
-    <h1 class="recipe-title">{E(r['title'])}</h1>
-    <div class="recipe-rule"></div>
+    return f"""<section class="{cls}"{attrs}>
+    {ver_title}
     {servings}
     {photo}
     <div class="recipe-cols">
@@ -285,7 +231,39 @@ def build_recipe(r):
         {notes_block}
       </div>
     </div>
-    <p class="print-source">{BASE_URL}/recipe/{r["slug"]}.html</p>
+  </section>"""
+
+
+def version_labels(members, by_slug):
+    labels, seen = [], {}
+    for m in members:
+        t = by_slug[m]["title"]
+        k = t.lower()
+        seen[k] = seen.get(k, 0) + 1
+        labels.append(t if seen[k] == 1 else f"{t} · {seen[k]}")
+    return labels
+
+
+def recipe_scripts(base):
+    return f'\n<script src="{base}assets/recipe.js"></script>\n'
+
+
+def build_recipe_page(r):
+    base = "../"
+    desc = clean_desc(r)
+    canonical = f'{BASE_URL}/recipe/{r["slug"]}.html'
+    image_url = f'{BASE_URL}/{r["image"]}' if r.get("image") else ""
+    return (
+        head(f'{r["title"]} — {SITE_TITLE}', desc, base, canonical,
+             image=image_url, extra_head=recipe_jsonld(r))
+        + header(base, "", compact=True)
+        + f"""<main id="main" class="wrap">
+  <article class="recipe">
+    <p class="breadcrumb"><a href="{base}index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="{base}index.html?c={quote(r['category'])}">{E(r['category'])}</a></p>
+    <h1 class="recipe-title">{E(r['title'])}</h1>
+    <div class="recipe-rule"></div>
+    {render_body(r, base)}
+    <p class="print-source">{canonical}</p>
     <div class="recipe-foot">
       <a class="btn" href="{base}index.html">&larr; All recipes</a>
       <button class="btn" onclick="window.print()">Print this recipe</button>
@@ -293,7 +271,112 @@ def build_recipe(r):
   </article>
 </main>
 """
-        + footer(base)
+        + footer(base) + recipe_scripts(base)
+    )
+
+
+def build_group_page(group, by_slug):
+    base = "../"
+    members = group["members"]
+    primary = by_slug[group["primary"]]
+    dish = group["dish"]
+    labels = version_labels(members, by_slug)
+    canonical = f'{BASE_URL}/recipe/{group["slug"]}.html'
+    image_url = ""
+    for m in members:
+        if by_slug[m].get("image"):
+            image_url = f'{BASE_URL}/{by_slug[m]["image"]}'; break
+    desc = f"Poppa kept {len(members)} versions of {dish}. " + clean_desc(primary, dish)
+
+    pills = "\n".join(
+        f'<a class="ver-pill" href="#v-{E(m)}" role="tab" aria-selected="{str(i==0).lower()}">{E(lab)}</a>'
+        for i, (m, lab) in enumerate(zip(members, labels))
+    )
+    sections = "\n".join(
+        render_body(by_slug[m], base, section_id=f"v-{m}", label=lab, active=(i == 0))
+        for i, (m, lab) in enumerate(zip(members, labels))
+    )
+
+    return (
+        head(f'{dish} — {SITE_TITLE}', desc, base, canonical,
+             image=image_url, extra_head=recipe_jsonld(primary, dish))
+        + header(base, "", compact=True)
+        + f"""<main id="main" class="wrap">
+  <article class="recipe" data-group="true">
+    <p class="breadcrumb"><a href="{base}index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="{base}index.html?c={quote(group['category'])}">{E(group['category'])}</a></p>
+    <h1 class="recipe-title">{E(dish)}</h1>
+    <div class="recipe-rule"></div>
+    <p class="versions-intro">Poppa kept <strong>{len(members)}</strong> versions of this — pick one:</p>
+    <div class="versions" role="tablist" aria-label="Versions of {E(dish)}">
+      {pills}
+    </div>
+    {sections}
+    <p class="print-source">{canonical}</p>
+    <div class="recipe-foot">
+      <a class="btn" href="{base}index.html">&larr; All recipes</a>
+      <button class="btn" onclick="window.print()">Print this version</button>
+    </div>
+  </article>
+</main>
+"""
+        + footer(base) + recipe_scripts(base)
+    )
+
+
+def build_alt_stub(alt, primary, dish):
+    """A folded recipe's old URL -> redirect to its dish page, version preselected."""
+    target = f'{primary}.html#v-{alt}'
+    canonical = f'{BASE_URL}/recipe/{primary}.html'
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{E(dish)} — {SITE_TITLE}</title>
+<link rel="canonical" href="{canonical}">
+<meta http-equiv="refresh" content="0; url={target}">
+<script>location.replace({json.dumps(target)});</script>
+</head>
+<body>
+<p>This recipe is now shown together with Poppa's other versions of
+<a href="{target}">{E(dish)}</a>.</p>
+</body>
+</html>"""
+
+
+def build_index(cards_html, n_recipes, counts):
+    chips = "\n".join(
+        f'<button class="chip" data-cat="{E(c, quote=True)}" aria-pressed="false">'
+        f'{E(c)} <span class="count">{counts[c]}</span></button>'
+        for c in CATEGORIES if counts.get(c)
+    )
+    magnifier = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" '
+                 'stroke="currentColor" stroke-width="2" aria-hidden="true">'
+                 '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>')
+    desc = (f"{n_recipes} of Poppa's recipes — chicken, meats, desserts, cookies, "
+            "salads, soups and more, gathered for the family.")
+    return (
+        head(SITE_TITLE, desc, "", BASE_URL + "/")
+        + header("", "home")
+        + f"""<main id="main" class="wrap">
+  <div class="controls">
+    <div class="search-box">
+      {magnifier}
+      <input id="search" type="search" placeholder="Search {n_recipes} recipes — try “chicken”, “cabbage”, “chocolate”…" aria-label="Search recipes by name, category, or ingredient" autocomplete="off">
+    </div>
+    <div class="category-bar" role="group" aria-label="Filter by category">
+      {chips}
+    </div>
+    <p class="result-meta" id="result-meta" role="status" aria-live="polite" aria-atomic="true">{n_recipes} recipes in the collection</p>
+  </div>
+
+  <div class="recipe-grid" id="recipe-grid">
+    {cards_html}
+    <p class="no-results" id="no-results" role="status" style="display:none">No recipes match — try another word.</p>
+  </div>
+</main>
+"""
+        + footer("")
+        + '\n<script src="assets/search.js"></script>\n'
     )
 
 
@@ -339,39 +422,88 @@ def build_404():
     )
 
 
-def build_sitemap(recipes):
-    urls = [f"{BASE_URL}/", f"{BASE_URL}/about.html"]
-    urls += [f'{BASE_URL}/recipe/{r["slug"]}.html' for r in recipes]
+def build_sitemap(urls):
     items = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}\n</urlset>\n'
 
 
 def main():
     recipes = json.loads(DATA.read_text(encoding="utf-8"))
+    by_slug = {r["slug"]: r for r in recipes}
+    groups = json.loads(GROUPS.read_text(encoding="utf-8")) if GROUPS.exists() else []
 
-    dups = [s for s, n in Counter(r["slug"] for r in recipes).items() if n > 1]
-    if dups:
-        raise SystemExit(f"Duplicate slugs would overwrite recipe pages: {dups}")
+    # maps: primary slug -> group; alternate slug -> (primary, dish)
+    primary_of = {g["primary"]: g for g in groups}
+    alt_of = {}
+    for g in groups:
+        for m in g["members"]:
+            if m != g["primary"]:
+                alt_of[m] = g
+
+    dup = [s for s, n in Counter(r["slug"] for r in recipes).items() if n > 1]
+    if dup:
+        raise SystemExit(f"Duplicate slugs would overwrite recipe pages: {dup}")
 
     rec_dir = SITE / "recipe"
     if rec_dir.exists():
         shutil.rmtree(rec_dir)
     rec_dir.mkdir(parents=True)
 
-    (SITE / "index.html").write_text(build_index(recipes), encoding="utf-8")
+    # --- recipe / group / stub pages ---------------------------------------
+    canonical_urls = [f"{BASE_URL}/", f"{BASE_URL}/about.html"]
+    for r in recipes:
+        slug = r["slug"]
+        if slug in primary_of:
+            (rec_dir / f"{slug}.html").write_text(build_group_page(primary_of[slug], by_slug), encoding="utf-8")
+            canonical_urls.append(f"{BASE_URL}/recipe/{slug}.html")
+        elif slug in alt_of:
+            g = alt_of[slug]
+            (rec_dir / f"{slug}.html").write_text(build_alt_stub(slug, g["primary"], g["dish"]), encoding="utf-8")
+        else:
+            (rec_dir / f"{slug}.html").write_text(build_recipe_page(r), encoding="utf-8")
+            canonical_urls.append(f"{BASE_URL}/recipe/{slug}.html")
+
+    # --- index cards: one per dish (primary) or standalone recipe -----------
+    cards = []
+    for r in recipes:
+        slug = r["slug"]
+        if slug in alt_of:
+            continue  # folded under its dish
+        if slug in primary_of:
+            g = primary_of[slug]
+            members = g["members"]
+            sig = " ".join(search_signature(by_slug[m]) for m in members)
+            image = next((by_slug[m]["image"] for m in members if by_slug[m].get("image")), None)
+            cards.append(card(g["dish"], f'recipe/{slug}.html', g["category"], sig, image,
+                              meta=f"{len(members)} versions", is_group=True))
+        else:
+            n = sum(1 for i in r["ingredients"] if "item" in i)
+            cards.append(card(r["title"], f'recipe/{slug}.html', r["category"],
+                              search_signature(r), r.get("image"),
+                              meta=f'{n} ingredient{"s" if n != 1 else ""}'))
+
+    # category counts reflect what's shown (dishes, not folded alternates)
+    counts = Counter()
+    for r in recipes:
+        if r["slug"] in alt_of:
+            continue
+        cat = primary_of[r["slug"]]["category"] if r["slug"] in primary_of else r["category"]
+        counts[cat] += 1
+
+    (SITE / "index.html").write_text(build_index("\n".join(cards), len(recipes), counts), encoding="utf-8")
     (SITE / "about.html").write_text(build_about(), encoding="utf-8")
     (SITE / "404.html").write_text(build_404(), encoding="utf-8")
     (SITE / "favicon.svg").write_text(favicon_svg(), encoding="utf-8")
-    (SITE / "sitemap.xml").write_text(build_sitemap(recipes), encoding="utf-8")
+    (SITE / "sitemap.xml").write_text(build_sitemap(canonical_urls), encoding="utf-8")
     (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
     (SITE / ".nojekyll").write_text("", encoding="utf-8")
 
-    for r in recipes:
-        (rec_dir / f'{r["slug"]}.html').write_text(build_recipe(r), encoding="utf-8")
-
-    print(f"Built site: index + about + 404 + {len(recipes)} recipe pages")
-    print(f"  photos: {sum(1 for r in recipes if r.get('image'))} | "
-          f"JSON-LD on every recipe page")
+    n_dishes = len(cards)
+    n_alts = len(alt_of)
+    print(f"Built site: {n_dishes} dish cards from {len(recipes)} recipes "
+          f"({len(groups)} groups folding {n_alts} alternates)")
+    print(f"  recipe pages: {len(recipes)} (incl. {n_alts} redirect stubs) | photos: "
+          f"{sum(1 for r in recipes if r.get('image'))}")
 
 
 if __name__ == "__main__":

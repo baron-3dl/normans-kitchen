@@ -1,0 +1,183 @@
+[
+  {
+    "slug": "banana-cream-pie",
+    "dish": "Banana Cream Pie",
+    "primary": "banana-cream-pie",
+    "members": [
+      "banana-cream-pie",
+      "banana-cream-pie-2"
+    ],
+    "category": "Desserts, Pies & Cakes"
+  },
+  {
+    "slug": "bread-pudding",
+    "dish": "Bread Pudding",
+    "primary": "bread-pudding",
+    "members": [
+      "bread-pudding",
+      "bread-pudding-i"
+    ],
+    "category": "Desserts, Pies & Cakes"
+  },
+  {
+    "slug": "chicken-cacciatore",
+    "dish": "Chicken Cacciatore",
+    "primary": "chicken-cacciatore",
+    "members": [
+      "chicken-cacciatore",
+      "chicken-cacciatore-2"
+    ],
+    "category": "Chicken & Poultry"
+  },
+  {
+    "slug": "chicken-cordon-bleu",
+    "dish": "Chicken Cordon Bleu",
+    "primary": "chicken-cordon-bleu",
+    "members": [
+      "chicken-cordon-bleu",
+      "chicken-cordon-bleu-2"
+    ],
+    "category": "Chicken & Poultry"
+  },
+  {
+    "slug": "parmesan-chicken",
+    "dish": "Chicken Parmesan",
+    "primary": "parmesan-chicken",
+    "members": [
+      "parmesan-chicken",
+      "chicken-parmesan"
+    ],
+    "category": "Chicken & Poultry"
+  },
+  {
+    "slug": "crispy-chicken-w-potato-crust",
+    "dish": "Chicken with Potato Crust",
+    "primary": "crispy-chicken-w-potato-crust",
+    "members": [
+      "crispy-chicken-w-potato-crust",
+      "chicken-with-potato-crust"
+    ],
+    "category": "Chicken & Poultry"
+  },
+  {
+    "slug": "creamy-chocolate-frosting-2",
+    "dish": "Creamy Chocolate Frosting",
+    "primary": "creamy-chocolate-frosting-2",
+    "members": [
+      "creamy-chocolate-frosting-2",
+      "creamy-chocolate-frosting"
+    ],
+    "category": "Desserts, Pies & Cakes"
+  },
+  {
+    "slug": "cretons-gorton",
+    "dish": "Cretons (Gorton)",
+    "primary": "cretons-gorton",
+    "members": [
+      "cretons-gorton",
+      "gorton"
+    ],
+    "category": "Pork"
+  },
+  {
+    "slug": "meat-pie",
+    "dish": "Meat Pie",
+    "primary": "meat-pie",
+    "members": [
+      "meat-pie",
+      "french-meat-pie",
+      "french-meat-pie-2"
+    ],
+    "category": "Meats"
+  },
+  {
+    "slug": "baked-rice",
+    "dish": "Oven-Baked Rice",
+    "primary": "baked-rice",
+    "members": [
+      "baked-rice",
+      "oven-rice"
+    ],
+    "category": "Rice"
+  },
+  {
+    "slug": "slow-cooked-pepper-steak",
+    "dish": "Pepper Steak",
+    "primary": "slow-cooked-pepper-steak",
+    "members": [
+      "slow-cooked-pepper-steak",
+      "savory-pepper-steak"
+    ],
+    "category": "Beef"
+  },
+  {
+    "slug": "oven-roasted-potatoes",
+    "dish": "Portuguese Oven-Roasted Potatoes",
+    "primary": "oven-roasted-potatoes",
+    "members": [
+      "oven-roasted-potatoes",
+      "oven-roasted"
+    ],
+    "category": "Potatoes"
+  },
+  {
+    "slug": "sauerkraut-salad-ii",
+    "dish": "Sauerkraut Salad",
+    "primary": "sauerkraut-salad-ii",
+    "members": [
+      "sauerkraut-salad-ii",
+      "sauerkraut-salad"
+    ],
+    "category": "Salads & Dressings"
+  },
+  {
+    "slug": "chocolate-cheese-squares",
+    "dish": "Sex in a Pan",
+    "primary": "chocolate-cheese-squares",
+    "members": [
+      "chocolate-cheese-squares",
+      "sex-in-a-pan"
+    ],
+    "category": "Cookies & Bars"
+  },
+  {
+    "slug": "pork-bbq-sandwiches",
+    "dish": "Shredded Pork Sandwiches",
+    "primary": "pork-bbq-sandwiches",
+    "members": [
+      "pork-bbq-sandwiches",
+      "shredded-pork-sandwiches"
+    ],
+    "category": "Pork"
+  },
+  {
+    "slug": "sour-cream-cookies",
+    "dish": "Sour Cream Cookies",
+    "primary": "sour-cream-cookies",
+    "members": [
+      "sour-cream-cookies",
+      "sour-cream-cookies-2"
+    ],
+    "category": "Cookies & Bars"
+  },
+  {
+    "slug": "swedish-meatballs",
+    "dish": "Swedish Meatballs",
+    "primary": "swedish-meatballs",
+    "members": [
+      "swedish-meatballs",
+      "swedish-meat-balls"
+    ],
+    "category": "Beef"
+  },
+  {
+    "slug": "swiss-steak",
+    "dish": "Swiss Steak",
+    "primary": "swiss-steak",
+    "members": [
+      "swiss-steak",
+      "swiss-steak-i"
+    ],
+    "category": "Beef"
+  }
+]

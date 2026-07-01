@@ -186,7 +186,37 @@ a:hover { color: var(--red-bright); text-decoration: underline; }
 .card-kicker { font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; color: var(--red); font-weight: 600; }
 .card-title { font-family: var(--serif-display); font-weight: 600; font-size: 1.14rem; line-height: 1.2; color: var(--ink); margin: 0; }
 .card-meta { margin-top: auto; font-size: .78rem; color: var(--ink-soft); font-style: italic; }
+.card-meta.group { color: var(--red); font-style: normal; font-weight: 600; letter-spacing: .02em; }
 .card.has-photo .card-title { font-size: 1.06rem; }
+
+/* dish (multi-version) cards */
+.card.is-group { border-color: var(--rule); box-shadow: 0 1px 2px var(--shadow), 3px 3px 0 -1px var(--paper-2), 4px 4px 0 -1px var(--paper-edge); }
+.card-ribbon {
+  position: absolute; top: .6rem; right: .6rem; z-index: 2;
+  font-size: .6rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700;
+  color: #fff; background: var(--red); padding: .22rem .5rem; border-radius: 999px;
+}
+
+/* version switcher on a dish page */
+.versions-intro { text-align: center; color: var(--ink-soft); font-style: italic; margin: 0 0 1rem; }
+.versions {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem .6rem;
+  margin: 0 auto 2rem; padding-bottom: 1.4rem; border-bottom: 1px dotted var(--rule); max-width: 640px;
+}
+.ver-pill {
+  font-family: var(--serif-body); font-size: .82rem; letter-spacing: .02em;
+  color: var(--ink-soft); background: var(--paper); text-decoration: none;
+  border: 1px solid var(--rule); border-radius: 999px; padding: .4rem 1rem;
+  min-height: 44px; display: inline-flex; align-items: center;
+}
+.ver-pill:hover { border-color: var(--red); color: var(--red); text-decoration: none; }
+.ver-pill[aria-selected="true"] { background: var(--red); border-color: var(--red); color: #fff; }
+.version-title {
+  font-family: var(--serif-display); font-weight: 600; font-size: 1.3rem;
+  text-align: center; color: var(--ink); margin: 0 0 1.2rem;
+}
+.version.single .version-title { display: none; }
+.version:not([hidden]) + .version:not([hidden]) { margin-top: 2.4rem; padding-top: 2rem; border-top: 2px solid var(--paper-edge); }
 
 .no-results { text-align: center; color: var(--ink-soft); font-style: italic; padding: 3rem 1rem; grid-column: 1 / -1; }
 
