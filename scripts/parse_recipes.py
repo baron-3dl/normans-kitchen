@@ -47,12 +47,41 @@ SEAFOOD_KW = ("shrimp", "crab", "lobster", "clam", "scallop", "salmon",
 SOUP_KW = ("soup", "chowder", "bisque", "pistou")
 SALAD_KW = ("salad", "slaw", "dressing", "vinaigrette")
 
-# A few recipes were mis-filed in the source folder tree; their true category can
-# only be decided by content. Keyed by source path (most stable identifier).
+# Many recipes were mis-filed in the source folder tree, so their folder-derived
+# category is wrong for their actual content. Keyed by source path. Confirmed by
+# an adversarial category-accuracy audit of all 353 recipes (each mismatch
+# independently verified). Mixed beef+pork dishes intentionally live in "Meats".
 CATEGORY_OVERRIDES = {
+    # from the earlier parse audit
     "Cookies/Cookies/Hot Crab Dip.htm": "Fish & Seafood",   # savory crab dip, not a cookie
     "pics/Chocolate Cheese Squares.htm": "Cookies & Bars",  # dessert bar, not "misc"
     "SSSSSSSSS/Shrimp Creole.htm": "Fish & Seafood",         # shrimp main dish
+    # from the category-accuracy audit — recipes filed by folder, not content
+    "Meats/Beef/Fish and Chips.htm": "Fish & Seafood",      # battered fish, no beef
+    "Meats/Beef/Mock Lobster Casserole.htm": "Fish & Seafood",  # haddock
+    "Meats/Beef/Stuffed Lobster Supreme.htm": "Fish & Seafood",  # lobster tails
+    "Meats/Beef/Chourico Stewed w-Cabbage.htm": "Pork",     # chourico (pork sausage)
+    "Meats/Beef/Sausage and Pepper Ragout.htm": "Pork",     # sausage
+    "Meats/Beef/Leg of Lamb w-Beans.htm": "Meats",          # lamb -> other meats
+    "Meats/Beef/French Meat Pie.htm": "Meats",              # beef+pork tourtière
+    "Meats/Beef/Swedish Meat Balls.htm": "Meats",           # mixed beef+pork
+    "Meats/Swedish Meatballs.htm": "Meats",                 # mixed beef+pork
+    "Meats/Beef/Best Baked Beans.htm": "Vegetables",        # meatless bean side
+    "Meats/Spicy Marinated Eye Round.htm": "Beef",          # eye round = beef
+    "Meats/Italian Meat Rolls.htm": "Beef",                 # ground beef loaves
+    "Meats/Pork/Barbeque Sauce.htm": "Sauces & Seasonings",   # standalone sauce
+    "Meats/Pork/Molasses BBQ Sauce.htm": "Sauces & Seasonings",  # standalone sauce
+    "Miscellaneous/CHILI.htm": "Beef",                      # beef chili
+    "Miscellaneous/MANHATTAN CLAM CHOWDER.htm": "Soups & Chowders",  # it's a chowder
+    "Rice/Rice/Special Rice Dessert (make a day ahead).htm": "Desserts, Pies & Cakes",
+    "SSSSSSSSS/SaladDressings/Honey and Wild Rice Dressing.htm": "Rice",  # rice stuffing, not a salad dressing
+    "Desserts/Chocolate Refrigerator Bars.htm": "Cookies & Bars",
+    "Desserts/PiesCakes/Heavenly Hash.htm": "Cookies & Bars",
+    "Cookies/Cookies/Fat Free Frosting.htm": "Desserts, Pies & Cakes",
+    "Cookies/Cookies/Grape Nut Pudding.htm": "Desserts, Pies & Cakes",
+    "Cookies/Cookies/Devil Dog Filling.htm": "Desserts, Pies & Cakes",
+    "Cookies/Cookies/Graham Cracker Retirement Puffs.htm": "Desserts, Pies & Cakes",
+    "Cookies/Cookies/Dark Chocolate Sauce.htm": "Sauces & Seasonings",  # a dessert sauce, but a sauce
 }
 
 

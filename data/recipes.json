@@ -2371,65 +2371,6 @@
     "image": null
   },
   {
-    "title": "Best Baked Beans",
-    "category": "Beef",
-    "source_file": "Meats/Beef/Best Baked Beans.htm",
-    "source_folder": "Meats/Beef",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "",
-        "item": "nonstick cooking spray"
-      },
-      {
-        "qty": "1 can",
-        "item": "15 oz black beans"
-      },
-      {
-        "qty": "1 can",
-        "item": "28 oz. vegetarian baked beans"
-      },
-      {
-        "qty": "1 lge",
-        "item": "onion, chopped"
-      },
-      {
-        "qty": "1",
-        "item": "green pepper, chopped"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "ketchup"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "brown sugar packed"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "prepared mustard"
-      },
-      {
-        "qty": "2 tsp",
-        "item": "Worcestershire sauce"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "arlic powder"
-      }
-    ],
-    "steps": [
-      "Heat oven to 350 degrees. Spray a 9 by 11 baking dish with cooking oil spray.",
-      "Pour all of the beans with their liquids into the dish. Peel and coarsely chop the onion, and add it to the dish. Seed and dice the bell pepper, and add it to the dish.",
-      "Add the ketchup, brown sugar, mustard, Worcestershire sauce and garlic powder. Stir gently, but thoroughly, until the ingredients are mixed well.",
-      "Bake the beans 30-35 minutes or until the mixture is bubbly and the onion and pepper are tender. Serve at once or cover with foil and leave in the oven (turned off) until ready to serve."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "best-baked-beans",
-    "image": null
-  },
-  {
     "title": "Cheesy Potato Meat Pie",
     "category": "Beef",
     "source_file": "Meats/Beef/Cheesy Potato Meat Pie.htm",
@@ -2555,47 +2496,63 @@
     "image": null
   },
   {
-    "title": "Chourico Stewed w/Cabbage",
+    "title": "Chili",
     "category": "Beef",
-    "source_file": "Meats/Beef/Chourico Stewed w-Cabbage.htm",
-    "source_folder": "Meats/Beef",
+    "source_file": "Miscellaneous/CHILI.htm",
+    "source_folder": "Miscellaneous",
     "servings": "",
     "ingredients": [
       {
-        "qty": "1 lb",
-        "item": "chourico, chopped up"
+        "qty": "2 lbs",
+        "item": "hamburger"
       },
       {
-        "qty": "2 qts",
-        "item": "soup stock"
-      },
-      {
-        "qty": "1 sm",
-        "item": "finely chopped cabbage"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "olive oil"
-      },
-      {
-        "qty": "2",
+        "qty": "2 cups",
         "item": "chopped onions"
       },
       {
-        "qty": "1 clove",
-        "item": "garlic"
+        "qty": "2 cans",
+        "item": "tomatoes (14 oz.)"
       },
       {
-        "qty": "",
-        "item": "salt and pepper to taste"
+        "qty": "1 can",
+        "item": "tomato sauce (7 oz)"
+      },
+      {
+        "qty": "Dash",
+        "item": "Tabasco (to taste)"
+      },
+      {
+        "qty": "2 can",
+        "item": "kidney beans (16 oz)"
+      },
+      {
+        "qty": "2 can",
+        "item": "beans (vegetarian)"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "sugar"
+      },
+      {
+        "qty": "2 tsp",
+        "item": "salt"
+      },
+      {
+        "qty": "2 tbsp",
+        "item": "chili powder"
+      },
+      {
+        "qty": "can",
+        "item": "kernel corn for color"
       }
     ],
     "steps": [
-      "Saute onion and garlic in oil. Slice chourico and add with remaining ingredients. Simmer until cabbage is well cooked."
+      "Brown meat and onions in large pan. Stir in tomatoes, tomato sauce, liquid from kidney beans and seasonings. Simmer uncovered 45 minutes stirring occasionally. Add (2) beans and corn. Cook 15 minutes more. Tabasco to taste. Add more beans if necessary or needed.."
     ],
     "notes": [],
     "source": "",
-    "slug": "chourico-stewed-w-cabbage",
+    "slug": "chili",
     "image": null
   },
   {
@@ -2717,100 +2674,6 @@
     "image": null
   },
   {
-    "title": "Fish and Chips",
-    "category": "Beef",
-    "source_file": "Meats/Beef/Fish and Chips.htm",
-    "source_folder": "Meats/Beef",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "2 1/2 lbs",
-        "item": "fillets"
-      },
-      {
-        "qty": "1 cup",
-        "item": "flour"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "salt"
-      },
-      {
-        "qty": "",
-        "item": "Batter"
-      },
-      {
-        "qty": "1 cup",
-        "item": "milk"
-      },
-      {
-        "qty": "3",
-        "item": "eggs, beaten"
-      },
-      {
-        "qty": "1 cup",
-        "item": "flour"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "salt"
-      }
-    ],
-    "steps": [
-      "Rinse and dry fish. Roll in flour seasoned with salt. Dip into batter, coating well. Heat oil to 375 degrees in saucepan, fry fish 4 minutes or until golden brown. Drain. Keep hot in low oven. Add potatoes to fat and fry as usual."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "fish-and-chips",
-    "image": null
-  },
-  {
-    "title": "French Meat Pie",
-    "category": "Beef",
-    "source_file": "Meats/Beef/French Meat Pie.htm",
-    "source_folder": "Meats/Beef",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "2 lbs",
-        "item": "hamburger"
-      },
-      {
-        "qty": "1 lb",
-        "item": "ground pork"
-      },
-      {
-        "qty": "5 or 6 med",
-        "item": "potatoes"
-      },
-      {
-        "qty": "1 med",
-        "item": "onion, chopped"
-      },
-      {
-        "qty": "1 tbs",
-        "item": "allspice (or poultry seasoning)"
-      },
-      {
-        "qty": "",
-        "item": "salt and pepper to taste"
-      },
-      {
-        "qty": "",
-        "item": "Pillsbury Pie Crusts"
-      }
-    ],
-    "steps": [
-      "Cook hamburger and pork with onions, in pot with enough water to cover meat, until all water is evaporated. Allow to cook slowly.",
-      "While resting, boil potatoes and mash. When meat is finished, drain what little water is left, add the potatoes to meat and mix well, adding the spices and salt and pepper.",
-      "Fill prepared pie crusts with meat filling, cut vents in top of crust and coat with milk or egg wash and cook to desired temperature til crust is golden brown. I think that is at 375 degrees."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "french-meat-pie",
-    "image": null
-  },
-  {
     "title": "Hamburger Layer Cake",
     "category": "Beef",
     "source_file": "Meats/Beef/Hamburger Layer Cake.htm",
@@ -2871,67 +2734,59 @@
     "image": null
   },
   {
-    "title": "Leg of Lamb w/Beans",
+    "title": "Italian Meat Rolls",
     "category": "Beef",
-    "source_file": "Meats/Beef/Leg of Lamb w-Beans.htm",
-    "source_folder": "Meats/Beef",
+    "source_file": "Meats/Italian Meat Rolls.htm",
+    "source_folder": "Meats",
     "servings": "",
     "ingredients": [
       {
-        "qty": "1 lb",
-        "item": "pea beans"
-      },
-      {
-        "qty": "2 cloves",
-        "item": "garlic"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "margarine"
-      },
-      {
-        "qty": "2 lbs",
-        "item": "onions thinly sliced"
-      },
-      {
-        "qty": "",
-        "item": "seasoned salt"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "salt"
+        "qty": "1 lb.",
+        "item": "hamburger rolls"
       },
       {
         "qty": "1/4 tsp",
         "item": "pepper"
       },
       {
-        "qty": "1 lge",
-        "item": "can Italian plum tomatoes, undrained"
+        "qty": "1 tbsp",
+        "item": "Worcestershire sauce"
       },
       {
-        "qty": "7 lb",
-        "item": "Leg of lamb"
+        "qty": "1 tbsp",
+        "item": "dry spaghetti sauce"
       },
       {
-        "qty": "1 tsp",
-        "item": "rosemary"
+        "qty": "1 tbsp",
+        "item": "lemon juice"
       },
       {
-        "qty": "",
-        "item": "parsley"
+        "qty": "1/2 tsp",
+        "item": "lemon/pepper seasoning"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "onion powder"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "garlic powder"
+      },
+      {
+        "qty": "2",
+        "item": "eggs beaten"
+      },
+      {
+        "qty": "1 cup",
+        "item": "corn flake crumbs"
       }
     ],
     "steps": [
-      "Cover beans with cold water and soak overnight.",
-      "Next day drain beans reserving liquid; add water to liquid to measure 2 qts. Pour beans and Liquid into 6 quart kettle, bring to boiling, simmer for 45 minutes or until beans are tender.",
-      "Saute onions in margarine with 1 clove of garlic until tender.",
-      "In roasting pan combine beans, onion mixture, seasoned salt, tomatoes and salt and pepper. Mix well.",
-      "Rub remaining garlic clove over lamb, sprinkle seasoned salt and rosemary all over lamb. Bake uncovered 3 1/2-4 hours."
+      "Combine all ingredients except egg and cornflake crumbs in bowl, mix well, shape into four even loves or rolls. Dip into egg, dredge in crumbs. Place on broiler rack. Bake at 350 degrees 30-35 minutes until done."
     ],
     "notes": [],
     "source": "",
-    "slug": "leg-of-lamb-w-beans",
+    "slug": "italian-meat-rolls",
     "image": null
   },
   {
@@ -3125,58 +2980,6 @@
     "image": null
   },
   {
-    "title": "Mock Lobster Casserole",
-    "category": "Beef",
-    "source_file": "Meats/Beef/Mock Lobster Casserole.htm",
-    "source_folder": "Meats/Beef",
-    "servings": "Serves 6",
-    "ingredients": [
-      {
-        "qty": "2 lbs",
-        "item": "haddock fillets"
-      },
-      {
-        "qty": "",
-        "item": "salt"
-      },
-      {
-        "qty": "1 cup",
-        "item": "cream of shrimp soup"
-      },
-      {
-        "qty": "1 tbs",
-        "item": "lemon juice"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "minced onions"
-      },
-      {
-        "qty": "1/8 tsp",
-        "item": "garlic powder"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "melted butter"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "Worcestershire sauce"
-      },
-      {
-        "qty": "3/4 cup",
-        "item": "bread crumbs or crushed Ritz crackers."
-      }
-    ],
-    "steps": [
-      "Place fish in a greased 2-qt casserole. Sprinkle with salt. Mix soup with lemon juice. Pour over fish. Bake uncovered for 20 minutes at 375 degrees. While baking, saute onion and garlic in butter. Remove from heat and add Worcestershire sauce. Then blend with crumbs. Sprinkle crumb mixture over fish and bake 10 minutes more. Serves 6."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "mock-lobster-casserole",
-    "image": null
-  },
-  {
     "title": "Onion Layered Hamburger",
     "category": "Beef",
     "source_file": "Meats/Beef/Onion Layered Hamburger.htm",
@@ -3277,60 +3080,6 @@
     "notes": [],
     "source": "",
     "slug": "roast-beef",
-    "image": null
-  },
-  {
-    "title": "Sausage and Pepper Ragout",
-    "category": "Beef",
-    "source_file": "Meats/Beef/Sausage and Pepper Ragout.htm",
-    "source_folder": "Meats/Beef",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "4 oz",
-        "item": "brown and serve sausages"
-      },
-      {
-        "qty": "1 bs",
-        "item": "unsalted butter"
-      },
-      {
-        "qty": "1 sm",
-        "item": "onion, diced"
-      },
-      {
-        "qty": "1 clove",
-        "item": "garlic, minced"
-      },
-      {
-        "qty": "2",
-        "item": "bell peppers, cut in 1 in. squares"
-      },
-      {
-        "qty": "1 can",
-        "item": "8 oz diced tomatoes, drained"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "minced fresh basil"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "sugar"
-      },
-      {
-        "qty": "",
-        "item": "salt and pepper to taste"
-      }
-    ],
-    "steps": [
-      "Cook sausage over medium heat in large skillet. Remove from pan; cut into 1-inch pieces. Set aside.",
-      "Melt butte in same pan. Add onion, and garlic; cook until softened, 2 to 3 minutes. Add bell peppers and cook over medium-high heat, stirring often, until limp, 5 to 6 minutes.",
-      "Add tomatoes with liquid, basil, sugar,salt and pepper; heat to a boil. Reduce heat, add sausages, and simmer until thickened, 5 minutes. Adjust seasoning ad serve hot. Can be made in advance and reheated."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "sausage-and-pepper-ragout",
     "image": null
   },
   {
@@ -3606,65 +3355,102 @@
     "image": null
   },
   {
-    "title": "Stuffed Lobster Supreme",
+    "title": "Spicy Marinated Eye Round",
     "category": "Beef",
-    "source_file": "Meats/Beef/Stuffed Lobster Supreme.htm",
-    "source_folder": "Meats/Beef",
+    "source_file": "Meats/Spicy Marinated Eye Round.htm",
+    "source_folder": "Meats",
     "servings": "",
     "ingredients": [
       {
-        "qty": "8",
-        "item": "frozen lobster tails"
+        "qty": "3-5 lbs",
+        "item": "Eye Round"
       },
       {
-        "qty": "1/4 lb",
-        "item": "butter"
+        "qty": "3",
+        "item": "onions sliced"
       },
       {
-        "qty": "4 tbs",
-        "item": "flour"
-      },
-      {
-        "qty": "1 tsp",
+        "qty": "1/2 tsp",
         "item": "salt"
       },
       {
-        "qty": "1 tsp",
-        "item": "paprika"
+        "qty": "1/4 tsp",
+        "item": "pepper"
       },
       {
-        "qty": "dash",
-        "item": "cayenne pepper"
+        "qty": "",
+        "item": "SPICY SAUCE"
       },
       {
         "qty": "2 cups",
-        "item": "light cream"
+        "item": "ketchup"
       },
       {
-        "qty": "2 tbs",
-        "item": "lemon juice"
+        "qty": "2 cups",
+        "item": "water"
+      },
+      {
+        "qty": "2 lge",
+        "item": "onions, sliced"
+      },
+      {
+        "qty": "1/3 cup",
+        "item": "wine vinegar"
       },
       {
         "qty": "1/4 cup",
-        "item": "cracker crumbs"
+        "item": "brown sugar"
       },
       {
-        "qty": "1/4 cup",
-        "item": "grated cheese"
+        "qty": "2 tbsp",
+        "item": "Worcestershire sauce"
       },
       {
-        "qty": "1 tbs",
-        "item": "melted butter (for topping)"
+        "qty": "1 tsp",
+        "item": "dry mustard"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "oregano"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "pepper"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "garlic powder"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "chili powder"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "ground cloves"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "ground nutmeg"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "Tabasco"
+      },
+      {
+        "qty": "1",
+        "item": "Bay leaf"
       }
     ],
     "steps": [
-      "Cook lobster tails in boiling salted water until done. Drain, and with scissors cut bottom of shell to remove meat nd save the shell to stuff. Cut meat into dice chunks.",
-      "Saute lobster mea in butter in large frying pan 2 to 3 minutes, remove from heat, blend in flour, salt, paprika, slowly stir in cream, cook stirring constantly until mixture thickens and boils 1 minute, stir in lemon juice.",
-      "Spoon filling into shells, sprinkle tops lightly with cracker crumbs, add melted butter. Bake at 450 degrees about 12 minutes."
+      "Place roast in pan, add onions, salt and pepper. Bake covered at 325 degrees for 3 hours and 30 minutes. Cool and slice thinly.",
+      "Place roast in casserole dish, add spicy sauce, cover and chill for 8 hours. When ready remove from fridge and let stand for 30 minutes. Bake at 350 degrees for 45 minutes.",
+      "SPICY SAUCE",
+      "Bring all ingredients to a boil, reduce heat and simmer 1 hour. Remove Bay leaf."
     ],
     "notes": [],
     "source": "",
-    "slug": "stuffed-lobster-supreme",
+    "slug": "spicy-marinated-eye-round",
     "image": null
   },
   {
@@ -3725,155 +3511,6 @@
     "notes": [],
     "source": "",
     "slug": "sukiyaki",
-    "image": null
-  },
-  {
-    "title": "Swedish Meat Balls",
-    "category": "Beef",
-    "source_file": "Meats/Beef/Swedish Meat Balls.htm",
-    "source_folder": "Meats/Beef",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "",
-        "item": "hamburger and ground pork"
-      },
-      {
-        "qty": "3/4 cup",
-        "item": "bread crumbs"
-      },
-      {
-        "qty": "",
-        "item": "milk"
-      },
-      {
-        "qty": "1",
-        "item": "onion, minced"
-      },
-      {
-        "qty": "",
-        "item": "butter"
-      },
-      {
-        "qty": "1",
-        "item": "egg"
-      },
-      {
-        "qty": "dash",
-        "item": "nutmeg"
-      },
-      {
-        "qty": "dash",
-        "item": "pepper"
-      },
-      {
-        "qty": "dash",
-        "item": "salt"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "flour"
-      },
-      {
-        "qty": "1 cup",
-        "item": "sour cream"
-      },
-      {
-        "qty": "",
-        "item": "drop"
-      },
-      {
-        "qty": "",
-        "item": "lemon juice"
-      },
-      {
-        "qty": "",
-        "item": "consomme"
-      }
-    ],
-    "steps": [
-      "Blend meats, crumbs and milk. Saute onion in butter and add to meat with eggs and seasoning. Mix with hands to get even texture, roll into small balls. Brown in butter. Remove. To pan juices add, flour and consomme to make gravy . Return meatballs to gravy and simmer over very low heat. Stir until hot, check seasoning and add lemon juice. Return meatballs to gravy and simmer over very low heat for 1 hour. Remove meatballs to serving platter. Stir sour cream into gravy and heat. Pour over meat balls."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "swedish-meat-balls",
-    "image": null
-  },
-  {
-    "title": "Swedish Meatballs",
-    "category": "Beef",
-    "source_file": "Meats/Swedish Meatballs.htm",
-    "source_folder": "Meats",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "?? ??",
-        "item": "Hamburg and Ground Pork"
-      },
-      {
-        "qty": "3/4 cup",
-        "item": "bread crumbs"
-      },
-      {
-        "qty": "",
-        "item": "milk"
-      },
-      {
-        "qty": "1",
-        "item": "onion, minced"
-      },
-      {
-        "qty": "",
-        "item": "butter"
-      },
-      {
-        "qty": "1",
-        "item": "egg"
-      },
-      {
-        "qty": "dash",
-        "item": "nutmeg"
-      },
-      {
-        "qty": "dash",
-        "item": "black pepper"
-      },
-      {
-        "qty": "dash",
-        "item": "salt"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "flour"
-      },
-      {
-        "qty": "1 cup",
-        "item": "sour cream"
-      },
-      {
-        "qty": "",
-        "item": "Drop"
-      },
-      {
-        "qty": "",
-        "item": "Lemon Juice"
-      },
-      {
-        "qty": "Can",
-        "item": "consomme"
-      },
-      {
-        "qty": "",
-        "item": "Consomme"
-      }
-    ],
-    "steps": [
-      "Blend meats, crumbs and milk. Saute onions in butter and add to meats with egg and seasonings. Mix well to get everything blended. Roll into balls. Brown in butter. Remove as they are cooked. To pan juices add flour and consomme, add lemon juice. Return balls to gravy and simmer 1 hour. Remove meat balls. Add sour cream to gravy and heat. Pour over meatballs.",
-      "?? ?? Depends on how many you want to make. May need to add more crumbs etc. depending on amount you make."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "swedish-meatballs",
     "image": null
   },
   {
@@ -4265,62 +3902,6 @@
     "image": null
   },
   {
-    "title": "Barbeque Sauce",
-    "category": "Pork",
-    "source_file": "Meats/Pork/Barbeque Sauce.htm",
-    "source_folder": "Meats/Pork",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "1/2 cup",
-        "item": "Wesson oil"
-      },
-      {
-        "qty": "3/4 cup",
-        "item": "chopped onions"
-      },
-      {
-        "qty": "3/4 cup",
-        "item": "ketchup"
-      },
-      {
-        "qty": "3/4 cup",
-        "item": "water"
-      },
-      {
-        "qty": "1/3 cup",
-        "item": "lemon juice"
-      },
-      {
-        "qty": "3 b",
-        "item": "sugar"
-      },
-      {
-        "qty": "3 tbs",
-        "item": "Worcestershire sauce"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "mustard"
-      },
-      {
-        "qty": "2 tsp",
-        "item": "salt"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "pepper"
-      }
-    ],
-    "steps": [
-      "Cook onion until soft in hot oil. Add remaining ingredients. Simmer for 1 minutes."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "barbeque-sauce",
-    "image": null
-  },
-  {
     "title": "Bev's Recipe",
     "category": "Pork",
     "source_file": "Meats/Pork/Bevs Recipe.htm",
@@ -4608,6 +4189,50 @@
     "notes": [],
     "source": "",
     "slug": "chili-pork-chops",
+    "image": null
+  },
+  {
+    "title": "Chourico Stewed w/Cabbage",
+    "category": "Pork",
+    "source_file": "Meats/Beef/Chourico Stewed w-Cabbage.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "1 lb",
+        "item": "chourico, chopped up"
+      },
+      {
+        "qty": "2 qts",
+        "item": "soup stock"
+      },
+      {
+        "qty": "1 sm",
+        "item": "finely chopped cabbage"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "olive oil"
+      },
+      {
+        "qty": "2",
+        "item": "chopped onions"
+      },
+      {
+        "qty": "1 clove",
+        "item": "garlic"
+      },
+      {
+        "qty": "",
+        "item": "salt and pepper to taste"
+      }
+    ],
+    "steps": [
+      "Saute onion and garlic in oil. Slice chourico and add with remaining ingredients. Simmer until cabbage is well cooked."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "chourico-stewed-w-cabbage",
     "image": null
   },
   {
@@ -4963,68 +4588,6 @@
     "image": null
   },
   {
-    "title": "Molasses BBQ Sauce",
-    "category": "Pork",
-    "source_file": "Meats/Pork/Molasses BBQ Sauce.htm",
-    "source_folder": "Meats/Pork",
-    "servings": "Makes 4 cups",
-    "ingredients": [
-      {
-        "qty": "1 cup",
-        "item": "cider vinegar"
-      },
-      {
-        "qty": "1 tbs",
-        "item": "grated ginger"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "dry mustard"
-      },
-      {
-        "qty": "1 1/4 cups",
-        "item": "ketchup"
-      },
-      {
-        "qty": "5 tbs",
-        "item": "Worcestershire sauce"
-      },
-      {
-        "qty": "1 clove",
-        "item": "garlic, crushed ice"
-      },
-      {
-        "qty": "1 cup",
-        "item": "molasses"
-      },
-      {
-        "qty": "1",
-        "item": "lemon, sliced"
-      },
-      {
-        "qty": "3 tbs",
-        "item": "butter, melted"
-      },
-      {
-        "qty": "",
-        "item": "salt to taste"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "lemon juice"
-      }
-    ],
-    "steps": [
-      "Using an enamel or stainless steel sauce pan, combine the vinegar, ginger, mustard, Worcestershire sauce, garlic, molasses and lemon slices. Bring to a boil and reduce heat to a simmer. Cook 20 minutes. Stir in butter and cook 5 minutes more. Remove from heat and add salt and lemon juice. Allow to cool and strain before sing, Makes 4 cups.",
-      "Like so many sauces, this one gets better with age. It should keep, refrigerated, for several weeks.",
-      "The secret to good barbecuing is to add the sauce during the last few minutes of cooking, otherwise the high sugar content burns before the meat or poultry is done."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "molasses-bbq-sauce",
-    "image": null
-  },
-  {
     "title": "Pork Barbecue on Buns",
     "category": "Pork",
     "source_file": "Meats/Pork Barbecue on Buns.htm",
@@ -5341,6 +4904,60 @@
     "image": null
   },
   {
+    "title": "Sausage and Pepper Ragout",
+    "category": "Pork",
+    "source_file": "Meats/Beef/Sausage and Pepper Ragout.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "4 oz",
+        "item": "brown and serve sausages"
+      },
+      {
+        "qty": "1 bs",
+        "item": "unsalted butter"
+      },
+      {
+        "qty": "1 sm",
+        "item": "onion, diced"
+      },
+      {
+        "qty": "1 clove",
+        "item": "garlic, minced"
+      },
+      {
+        "qty": "2",
+        "item": "bell peppers, cut in 1 in. squares"
+      },
+      {
+        "qty": "1 can",
+        "item": "8 oz diced tomatoes, drained"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "minced fresh basil"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "sugar"
+      },
+      {
+        "qty": "",
+        "item": "salt and pepper to taste"
+      }
+    ],
+    "steps": [
+      "Cook sausage over medium heat in large skillet. Remove from pan; cut into 1-inch pieces. Set aside.",
+      "Melt butte in same pan. Add onion, and garlic; cook until softened, 2 to 3 minutes. Add bell peppers and cook over medium-high heat, stirring often, until limp, 5 to 6 minutes.",
+      "Add tomatoes with liquid, basil, sugar,salt and pepper; heat to a boil. Reduce heat, add sausages, and simmer until thickened, 5 minutes. Adjust seasoning ad serve hot. Can be made in advance and reheated."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "sausage-and-pepper-ragout",
+    "image": null
+  },
+  {
     "title": "Shredded Pork Sandwiches",
     "category": "Pork",
     "source_file": "Meats/Shredded Pork Sandwiches.htm",
@@ -5553,6 +5170,52 @@
   {
     "title": "French Meat Pie",
     "category": "Meats",
+    "source_file": "Meats/Beef/French Meat Pie.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "2 lbs",
+        "item": "hamburger"
+      },
+      {
+        "qty": "1 lb",
+        "item": "ground pork"
+      },
+      {
+        "qty": "5 or 6 med",
+        "item": "potatoes"
+      },
+      {
+        "qty": "1 med",
+        "item": "onion, chopped"
+      },
+      {
+        "qty": "1 tbs",
+        "item": "allspice (or poultry seasoning)"
+      },
+      {
+        "qty": "",
+        "item": "salt and pepper to taste"
+      },
+      {
+        "qty": "",
+        "item": "Pillsbury Pie Crusts"
+      }
+    ],
+    "steps": [
+      "Cook hamburger and pork with onions, in pot with enough water to cover meat, until all water is evaporated. Allow to cook slowly.",
+      "While resting, boil potatoes and mash. When meat is finished, drain what little water is left, add the potatoes to meat and mix well, adding the spices and salt and pepper.",
+      "Fill prepared pie crusts with meat filling, cut vents in top of crust and coat with milk or egg wash and cook to desired temperature til crust is golden brown. I think that is at 375 degrees."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "french-meat-pie",
+    "image": null
+  },
+  {
+    "title": "French Meat Pie",
+    "category": "Meats",
     "source_file": "Meats/French Meat Pie.htm",
     "source_folder": "Meats",
     "servings": "",
@@ -5671,59 +5334,67 @@
     "image": null
   },
   {
-    "title": "Italian Meat Rolls",
+    "title": "Leg of Lamb w/Beans",
     "category": "Meats",
-    "source_file": "Meats/Italian Meat Rolls.htm",
-    "source_folder": "Meats",
+    "source_file": "Meats/Beef/Leg of Lamb w-Beans.htm",
+    "source_folder": "Meats/Beef",
     "servings": "",
     "ingredients": [
       {
-        "qty": "1 lb.",
-        "item": "hamburger rolls"
+        "qty": "1 lb",
+        "item": "pea beans"
+      },
+      {
+        "qty": "2 cloves",
+        "item": "garlic"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "margarine"
+      },
+      {
+        "qty": "2 lbs",
+        "item": "onions thinly sliced"
+      },
+      {
+        "qty": "",
+        "item": "seasoned salt"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "salt"
       },
       {
         "qty": "1/4 tsp",
         "item": "pepper"
       },
       {
-        "qty": "1 tbsp",
-        "item": "Worcestershire sauce"
+        "qty": "1 lge",
+        "item": "can Italian plum tomatoes, undrained"
       },
       {
-        "qty": "1 tbsp",
-        "item": "dry spaghetti sauce"
+        "qty": "7 lb",
+        "item": "Leg of lamb"
       },
       {
-        "qty": "1 tbsp",
-        "item": "lemon juice"
+        "qty": "1 tsp",
+        "item": "rosemary"
       },
       {
-        "qty": "1/2 tsp",
-        "item": "lemon/pepper seasoning"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "onion powder"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "garlic powder"
-      },
-      {
-        "qty": "2",
-        "item": "eggs beaten"
-      },
-      {
-        "qty": "1 cup",
-        "item": "corn flake crumbs"
+        "qty": "",
+        "item": "parsley"
       }
     ],
     "steps": [
-      "Combine all ingredients except egg and cornflake crumbs in bowl, mix well, shape into four even loves or rolls. Dip into egg, dredge in crumbs. Place on broiler rack. Bake at 350 degrees 30-35 minutes until done."
+      "Cover beans with cold water and soak overnight.",
+      "Next day drain beans reserving liquid; add water to liquid to measure 2 qts. Pour beans and Liquid into 6 quart kettle, bring to boiling, simmer for 45 minutes or until beans are tender.",
+      "Saute onions in margarine with 1 clove of garlic until tender.",
+      "In roasting pan combine beans, onion mixture, seasoned salt, tomatoes and salt and pepper. Mix well.",
+      "Rub remaining garlic clove over lamb, sprinkle seasoned salt and rosemary all over lamb. Bake uncovered 3 1/2-4 hours."
     ],
     "notes": [],
     "source": "",
-    "slug": "italian-meat-rolls",
+    "slug": "leg-of-lamb-w-beans",
     "image": null
   },
   {
@@ -5787,102 +5458,152 @@
     "image": null
   },
   {
-    "title": "Spicy Marinated Eye Round",
+    "title": "Swedish Meat Balls",
     "category": "Meats",
-    "source_file": "Meats/Spicy Marinated Eye Round.htm",
+    "source_file": "Meats/Beef/Swedish Meat Balls.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "",
+        "item": "hamburger and ground pork"
+      },
+      {
+        "qty": "3/4 cup",
+        "item": "bread crumbs"
+      },
+      {
+        "qty": "",
+        "item": "milk"
+      },
+      {
+        "qty": "1",
+        "item": "onion, minced"
+      },
+      {
+        "qty": "",
+        "item": "butter"
+      },
+      {
+        "qty": "1",
+        "item": "egg"
+      },
+      {
+        "qty": "dash",
+        "item": "nutmeg"
+      },
+      {
+        "qty": "dash",
+        "item": "pepper"
+      },
+      {
+        "qty": "dash",
+        "item": "salt"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "flour"
+      },
+      {
+        "qty": "1 cup",
+        "item": "sour cream"
+      },
+      {
+        "qty": "",
+        "item": "drop"
+      },
+      {
+        "qty": "",
+        "item": "lemon juice"
+      },
+      {
+        "qty": "",
+        "item": "consomme"
+      }
+    ],
+    "steps": [
+      "Blend meats, crumbs and milk. Saute onion in butter and add to meat with eggs and seasoning. Mix with hands to get even texture, roll into small balls. Brown in butter. Remove. To pan juices add, flour and consomme to make gravy . Return meatballs to gravy and simmer over very low heat. Stir until hot, check seasoning and add lemon juice. Return meatballs to gravy and simmer over very low heat for 1 hour. Remove meatballs to serving platter. Stir sour cream into gravy and heat. Pour over meat balls."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "swedish-meat-balls",
+    "image": null
+  },
+  {
+    "title": "Swedish Meatballs",
+    "category": "Meats",
+    "source_file": "Meats/Swedish Meatballs.htm",
     "source_folder": "Meats",
     "servings": "",
     "ingredients": [
       {
-        "qty": "3-5 lbs",
-        "item": "Eye Round"
+        "qty": "?? ??",
+        "item": "Hamburg and Ground Pork"
       },
       {
-        "qty": "3",
-        "item": "onions sliced"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "salt"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "pepper"
+        "qty": "3/4 cup",
+        "item": "bread crumbs"
       },
       {
         "qty": "",
-        "item": "SPICY SAUCE"
-      },
-      {
-        "qty": "2 cups",
-        "item": "ketchup"
-      },
-      {
-        "qty": "2 cups",
-        "item": "water"
-      },
-      {
-        "qty": "2 lge",
-        "item": "onions, sliced"
-      },
-      {
-        "qty": "1/3 cup",
-        "item": "wine vinegar"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "brown sugar"
-      },
-      {
-        "qty": "2 tbsp",
-        "item": "Worcestershire sauce"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "dry mustard"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "oregano"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "pepper"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "garlic powder"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "chili powder"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "ground cloves"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "ground nutmeg"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "Tabasco"
+        "item": "milk"
       },
       {
         "qty": "1",
-        "item": "Bay leaf"
+        "item": "onion, minced"
+      },
+      {
+        "qty": "",
+        "item": "butter"
+      },
+      {
+        "qty": "1",
+        "item": "egg"
+      },
+      {
+        "qty": "dash",
+        "item": "nutmeg"
+      },
+      {
+        "qty": "dash",
+        "item": "black pepper"
+      },
+      {
+        "qty": "dash",
+        "item": "salt"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "flour"
+      },
+      {
+        "qty": "1 cup",
+        "item": "sour cream"
+      },
+      {
+        "qty": "",
+        "item": "Drop"
+      },
+      {
+        "qty": "",
+        "item": "Lemon Juice"
+      },
+      {
+        "qty": "Can",
+        "item": "consomme"
+      },
+      {
+        "qty": "",
+        "item": "Consomme"
       }
     ],
     "steps": [
-      "Place roast in pan, add onions, salt and pepper. Bake covered at 325 degrees for 3 hours and 30 minutes. Cool and slice thinly.",
-      "Place roast in casserole dish, add spicy sauce, cover and chill for 8 hours. When ready remove from fridge and let stand for 30 minutes. Bake at 350 degrees for 45 minutes.",
-      "SPICY SAUCE",
-      "Bring all ingredients to a boil, reduce heat and simmer 1 hour. Remove Bay leaf."
+      "Blend meats, crumbs and milk. Saute onions in butter and add to meats with egg and seasonings. Mix well to get everything blended. Roll into balls. Brown in butter. Remove as they are cooked. To pan juices add flour and consomme, add lemon juice. Return balls to gravy and simmer 1 hour. Remove meat balls. Add sour cream to gravy and heat. Pour over meatballs.",
+      "?? ?? Depends on how many you want to make. May need to add more crumbs etc. depending on amount you make."
     ],
     "notes": [],
     "source": "",
-    "slug": "spicy-marinated-eye-round",
+    "slug": "swedish-meatballs",
     "image": null
   },
   {
@@ -6086,6 +5807,54 @@
     "image": null
   },
   {
+    "title": "Fish and Chips",
+    "category": "Fish & Seafood",
+    "source_file": "Meats/Beef/Fish and Chips.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "2 1/2 lbs",
+        "item": "fillets"
+      },
+      {
+        "qty": "1 cup",
+        "item": "flour"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "salt"
+      },
+      {
+        "qty": "",
+        "item": "Batter"
+      },
+      {
+        "qty": "1 cup",
+        "item": "milk"
+      },
+      {
+        "qty": "3",
+        "item": "eggs, beaten"
+      },
+      {
+        "qty": "1 cup",
+        "item": "flour"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "salt"
+      }
+    ],
+    "steps": [
+      "Rinse and dry fish. Roll in flour seasoned with salt. Dip into batter, coating well. Heat oil to 375 degrees in saucepan, fry fish 4 minutes or until golden brown. Drain. Keep hot in low oven. Add potatoes to fat and fry as usual."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "fish-and-chips",
+    "image": null
+  },
+  {
     "title": "Hot Crab Dip",
     "category": "Fish & Seafood",
     "source_file": "Cookies/Cookies/Hot Crab Dip.htm",
@@ -6126,63 +5895,55 @@
     "image": null
   },
   {
-    "title": "Manhattan Clam Chowder",
+    "title": "Mock Lobster Casserole",
     "category": "Fish & Seafood",
-    "source_file": "Miscellaneous/MANHATTAN CLAM CHOWDER.htm",
-    "source_folder": "Miscellaneous",
-    "servings": "Makes 4-6 servings",
+    "source_file": "Meats/Beef/Mock Lobster Casserole.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "Serves 6",
     "ingredients": [
       {
-        "qty": "2 large",
-        "item": "potatoes, peeled and diced"
-      },
-      {
-        "qty": "2 slices",
-        "item": "bacon diced"
-      },
-      {
-        "qty": "2 small",
-        "item": "onions chopped"
-      },
-      {
-        "qty": "1",
-        "item": "green pepper finely diced"
-      },
-      {
-        "qty": "1 stalks",
-        "item": "celery, diced"
-      },
-      {
-        "qty": "1 quart",
-        "item": "boiling water"
-      },
-      {
-        "qty": "2 tbsp",
-        "item": "tomato paste"
-      },
-      {
-        "qty": "1 can (16 0z.)",
-        "item": "tomatoes chopped"
-      },
-      {
-        "qty": "1 can 10 0z)",
-        "item": "minced clams"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "thyme"
+        "qty": "2 lbs",
+        "item": "haddock fillets"
       },
       {
         "qty": "",
-        "item": "salt and pepper to taste"
+        "item": "salt"
+      },
+      {
+        "qty": "1 cup",
+        "item": "cream of shrimp soup"
+      },
+      {
+        "qty": "1 tbs",
+        "item": "lemon juice"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "minced onions"
+      },
+      {
+        "qty": "1/8 tsp",
+        "item": "garlic powder"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "melted butter"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "Worcestershire sauce"
+      },
+      {
+        "qty": "3/4 cup",
+        "item": "bread crumbs or crushed Ritz crackers."
       }
     ],
     "steps": [
-      "Cube bacon and brown in soup pan. Add potatoes and onions turn to glaze. Add green pepper and celery. Cook, stirring occasionally, to glaze. Add boiling water, tomatoes and paste, liquid drained from clams and thyme. Simmer about 5 minutes, until potatoes are tender. Add clams, heat briefly, season with salt and pepper. Makes 4-6 servings."
+      "Place fish in a greased 2-qt casserole. Sprinkle with salt. Mix soup with lemon juice. Pour over fish. Bake uncovered for 20 minutes at 375 degrees. While baking, saute onion and garlic in butter. Remove from heat and add Worcestershire sauce. Then blend with crumbs. Sprinkle crumb mixture over fish and bake 10 minutes more. Serves 6."
     ],
     "notes": [],
     "source": "",
-    "slug": "manhattan-clam-chowder",
+    "slug": "mock-lobster-casserole",
     "image": null
   },
   {
@@ -6292,6 +6053,68 @@
     "notes": [],
     "source": "",
     "slug": "shrimp-creole",
+    "image": null
+  },
+  {
+    "title": "Stuffed Lobster Supreme",
+    "category": "Fish & Seafood",
+    "source_file": "Meats/Beef/Stuffed Lobster Supreme.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "8",
+        "item": "frozen lobster tails"
+      },
+      {
+        "qty": "1/4 lb",
+        "item": "butter"
+      },
+      {
+        "qty": "4 tbs",
+        "item": "flour"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "salt"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "paprika"
+      },
+      {
+        "qty": "dash",
+        "item": "cayenne pepper"
+      },
+      {
+        "qty": "2 cups",
+        "item": "light cream"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "lemon juice"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "cracker crumbs"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "grated cheese"
+      },
+      {
+        "qty": "1 tbs",
+        "item": "melted butter (for topping)"
+      }
+    ],
+    "steps": [
+      "Cook lobster tails in boiling salted water until done. Drain, and with scissors cut bottom of shell to remove meat nd save the shell to stuff. Cut meat into dice chunks.",
+      "Saute lobster mea in butter in large frying pan 2 to 3 minutes, remove from heat, blend in flour, salt, paprika, slowly stir in cream, cook stirring constantly until mixture thickens and boils 1 minute, stir in lemon juice.",
+      "Spoon filling into shells, sprinkle tops lightly with cracker crumbs, add melted butter. Bake at 450 degrees about 12 minutes."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "stuffed-lobster-supreme",
     "image": null
   },
   {
@@ -6808,6 +6631,74 @@
     "image": null
   },
   {
+    "title": "Honey and Wild Rice Dressing",
+    "category": "Rice",
+    "source_file": "SSSSSSSSS/SaladDressings/Honey and Wild Rice Dressing.htm",
+    "source_folder": "SSSSSSSSS/SaladDressings",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "1/4 cup",
+        "item": "margarine"
+      },
+      {
+        "qty": "1 lge",
+        "item": "onion, chopped"
+      },
+      {
+        "qty": "2",
+        "item": "Granny Smith apples, peeled, cored, chopped"
+      },
+      {
+        "qty": "2 ribs",
+        "item": "celery, chopped"
+      },
+      {
+        "qty": "1 cup",
+        "item": "white rice, cooked"
+      },
+      {
+        "qty": "1/2 cup",
+        "item": "wild rice, cooked, drained"
+      },
+      {
+        "qty": "1/2 cup",
+        "item": "chopped walnuts (optional)"
+      },
+      {
+        "qty": "1/3 cup",
+        "item": "chicken broth"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "chopped fresh parsley"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "honey"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "dried thyme"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "dried sage"
+      }
+    ],
+    "steps": [
+      "Melt margarine in a large skillet over medium heat.",
+      "Add onions, apples, and celery.",
+      "Cook, stirring occasionally, until softened, about 5 minutes.",
+      "Combine onion mixture and remaining ingredients in a large bowl.",
+      "Transfer to a casserole dish and bake covered at 350 degrees for 45 minutes."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "honey-and-wild-rice-dressing",
+    "image": null
+  },
+  {
     "title": "Infallible Rice",
     "category": "Rice",
     "source_file": "Rice/Rice/Infallible Rice.htm",
@@ -6946,47 +6837,6 @@
     "notes": [],
     "source": "",
     "slug": "oven-rice",
-    "image": null
-  },
-  {
-    "title": "Special Rice Dessert (make a day ahead)",
-    "category": "Rice",
-    "source_file": "Rice/Rice/Special Rice Dessert (make a day ahead).htm",
-    "source_folder": "Rice/Rice",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "1 cup",
-        "item": "rice"
-      },
-      {
-        "qty": "1 cup",
-        "item": "sugar"
-      },
-      {
-        "qty": "1 can",
-        "item": "crushed pineapple, drained"
-      },
-      {
-        "qty": "1 pint",
-        "item": "whipping cream"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "vanilla"
-      },
-      {
-        "qty": "1 jar",
-        "item": "cherries, drained"
-      }
-    ],
-    "steps": [
-      "Put rice and sugar in saucepan with water, (plenty of it) boil until cooked. Fold in pineapple and refrigerate until next day.",
-      "Whip cream with vanilla, fold cream into rice, fold in cherries."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "special-rice-dessert-make-a-day-ahead",
     "image": null
   },
   {
@@ -7905,6 +7755,65 @@
     "notes": [],
     "source": "",
     "slug": "warm-potato-salad",
+    "image": null
+  },
+  {
+    "title": "Best Baked Beans",
+    "category": "Vegetables",
+    "source_file": "Meats/Beef/Best Baked Beans.htm",
+    "source_folder": "Meats/Beef",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "",
+        "item": "nonstick cooking spray"
+      },
+      {
+        "qty": "1 can",
+        "item": "15 oz black beans"
+      },
+      {
+        "qty": "1 can",
+        "item": "28 oz. vegetarian baked beans"
+      },
+      {
+        "qty": "1 lge",
+        "item": "onion, chopped"
+      },
+      {
+        "qty": "1",
+        "item": "green pepper, chopped"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "ketchup"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "brown sugar packed"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "prepared mustard"
+      },
+      {
+        "qty": "2 tsp",
+        "item": "Worcestershire sauce"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "arlic powder"
+      }
+    ],
+    "steps": [
+      "Heat oven to 350 degrees. Spray a 9 by 11 baking dish with cooking oil spray.",
+      "Pour all of the beans with their liquids into the dish. Peel and coarsely chop the onion, and add it to the dish. Seed and dice the bell pepper, and add it to the dish.",
+      "Add the ketchup, brown sugar, mustard, Worcestershire sauce and garlic powder. Stir gently, but thoroughly, until the ingredients are mixed well.",
+      "Bake the beans 30-35 minutes or until the mixture is bubbly and the onion and pepper are tender. Serve at once or cover with foil and leave in the oven (turned off) until ready to serve."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "best-baked-beans",
     "image": null
   },
   {
@@ -9419,74 +9328,6 @@
     "image": null
   },
   {
-    "title": "Honey and Wild Rice Dressing",
-    "category": "Salads & Dressings",
-    "source_file": "SSSSSSSSS/SaladDressings/Honey and Wild Rice Dressing.htm",
-    "source_folder": "SSSSSSSSS/SaladDressings",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "1/4 cup",
-        "item": "margarine"
-      },
-      {
-        "qty": "1 lge",
-        "item": "onion, chopped"
-      },
-      {
-        "qty": "2",
-        "item": "Granny Smith apples, peeled, cored, chopped"
-      },
-      {
-        "qty": "2 ribs",
-        "item": "celery, chopped"
-      },
-      {
-        "qty": "1 cup",
-        "item": "white rice, cooked"
-      },
-      {
-        "qty": "1/2 cup",
-        "item": "wild rice, cooked, drained"
-      },
-      {
-        "qty": "1/2 cup",
-        "item": "chopped walnuts (optional)"
-      },
-      {
-        "qty": "1/3 cup",
-        "item": "chicken broth"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "chopped fresh parsley"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "honey"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "dried thyme"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "dried sage"
-      }
-    ],
-    "steps": [
-      "Melt margarine in a large skillet over medium heat.",
-      "Add onions, apples, and celery.",
-      "Cook, stirring occasionally, until softened, about 5 minutes.",
-      "Combine onion mixture and remaining ingredients in a large bowl.",
-      "Transfer to a casserole dish and bake covered at 350 degrees for 45 minutes."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "honey-and-wild-rice-dressing",
-    "image": null
-  },
-  {
     "title": "Icebox Vegetable salad",
     "category": "Salads & Dressings",
     "source_file": "SSSSSSSSS/SaladDressings/Icebox Vegetable salad.htm",
@@ -10211,6 +10052,66 @@
     "notes": [],
     "source": "",
     "slug": "lemon-chicken-rice-soup",
+    "image": null
+  },
+  {
+    "title": "Manhattan Clam Chowder",
+    "category": "Soups & Chowders",
+    "source_file": "Miscellaneous/MANHATTAN CLAM CHOWDER.htm",
+    "source_folder": "Miscellaneous",
+    "servings": "Makes 4-6 servings",
+    "ingredients": [
+      {
+        "qty": "2 large",
+        "item": "potatoes, peeled and diced"
+      },
+      {
+        "qty": "2 slices",
+        "item": "bacon diced"
+      },
+      {
+        "qty": "2 small",
+        "item": "onions chopped"
+      },
+      {
+        "qty": "1",
+        "item": "green pepper finely diced"
+      },
+      {
+        "qty": "1 stalks",
+        "item": "celery, diced"
+      },
+      {
+        "qty": "1 quart",
+        "item": "boiling water"
+      },
+      {
+        "qty": "2 tbsp",
+        "item": "tomato paste"
+      },
+      {
+        "qty": "1 can (16 0z.)",
+        "item": "tomatoes chopped"
+      },
+      {
+        "qty": "1 can 10 0z)",
+        "item": "minced clams"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "thyme"
+      },
+      {
+        "qty": "",
+        "item": "salt and pepper to taste"
+      }
+    ],
+    "steps": [
+      "Cube bacon and brown in soup pan. Add potatoes and onions turn to glaze. Add green pepper and celery. Cook, stirring occasionally, to glaze. Add boiling water, tomatoes and paste, liquid drained from clams and thyme. Simmer about 5 minutes, until potatoes are tender. Add clams, heat briefly, season with salt and pepper. Makes 4-6 servings."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "manhattan-clam-chowder",
     "image": null
   },
   {
@@ -11630,60 +11531,6 @@
     "image": null
   },
   {
-    "title": "Chocolate Refrigerator Bars",
-    "category": "Desserts, Pies & Cakes",
-    "source_file": "Desserts/Chocolate Refrigerator Bars.htm",
-    "source_folder": "Desserts",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "1/2 cup",
-        "item": "margarine"
-      },
-      {
-        "qty": "1/3 cup",
-        "item": "sugar"
-      },
-      {
-        "qty": "5 tbsp",
-        "item": "unsweetened cocoa"
-      },
-      {
-        "qty": "1",
-        "item": "egg, beaten"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "vanilla extract"
-      },
-      {
-        "qty": "1 cup",
-        "item": "flaked coconut milk"
-      },
-      {
-        "qty": "1/3 cup",
-        "item": "chopped nuts"
-      },
-      {
-        "qty": "8",
-        "item": "graham crackers crushed"
-      }
-    ],
-    "steps": [
-      "Grease 9-inch square pan",
-      "Melt margarine, sugar, in small saucepan over low heat until smooth. Stir in cocoa, egg and vanilla. Cook until mix thickens, stirring constantly. Remove from heat, stir in coconut, nuts and crushed crackers. Press mixture into pan, refrigerate 1 hour.",
-      "Butter Icing:",
-      "1/4 cup margarine, 1 3/4 cups powder sugar, sifted, 1 egg.",
-      "In a small bowl beat butter, powdered sugar and egg until smooth. Spread over refrigerated mixture. Chill until firm. Cut into bars.",
-      "Chocolate Topping:",
-      "6 oz. semi sweet chocolate, 1 tbsp butter. Melt chocolate and butter until smooth. Swirl over refrigerated mixture.Refrigerate for 3 to 4 hours. Cut into bars."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "chocolate-refrigerator-bars",
-    "image": null
-  },
-  {
     "title": "Chocolate Silk Pie",
     "category": "Desserts, Pies & Cakes",
     "source_file": "Desserts/Chocolate Silk Pie.htm",
@@ -12548,6 +12395,42 @@
     "image": null
   },
   {
+    "title": "Devil Dog Filling",
+    "category": "Desserts, Pies & Cakes",
+    "source_file": "Cookies/Cookies/Devil Dog Filling.htm",
+    "source_folder": "Cookies/Cookies",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "1/3 cup",
+        "item": "evaporated milk"
+      },
+      {
+        "qty": "2/3 cup",
+        "item": "shortening"
+      },
+      {
+        "qty": "1 1/2 cups",
+        "item": "sugar"
+      },
+      {
+        "qty": "1/4 tsp",
+        "item": "salt"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "vanilla"
+      }
+    ],
+    "steps": [
+      "Mix all ingredients together, beat for about 5 minutes until creamy."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "devil-dog-filling",
+    "image": null
+  },
+  {
     "title": "Double Dark Decadent Brownie",
     "category": "Desserts, Pies & Cakes",
     "source_file": "Desserts/Double Dark Decadent Brownie.htm",
@@ -12635,6 +12518,34 @@
     "notes": [],
     "source": "",
     "slug": "e-z-3-step-cheese-cake",
+    "image": null
+  },
+  {
+    "title": "Fat Free Frosting",
+    "category": "Desserts, Pies & Cakes",
+    "source_file": "Cookies/Cookies/Fat Free Frosting.htm",
+    "source_folder": "Cookies/Cookies",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "1 pkg",
+        "item": "pudding"
+      },
+      {
+        "qty": "1 1/2 cups",
+        "item": "cold skim milk"
+      },
+      {
+        "qty": "1 env",
+        "item": "Dream Whip topping mix"
+      }
+    ],
+    "steps": [
+      "Beat milk and topping and pudding on low speed until blended and then on high fo 4-6 minutes until soft peaks form. Enough to frost a 13 x 9 cake, refrigerate."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "fat-free-frosting",
     "image": null
   },
   {
@@ -13020,46 +12931,93 @@
     "image": null
   },
   {
-    "title": "Heavenly Hash",
+    "title": "Graham Cracker Retirement Puffs",
     "category": "Desserts, Pies & Cakes",
-    "source_file": "Desserts/PiesCakes/Heavenly Hash.htm",
-    "source_folder": "Desserts/PiesCakes",
+    "source_file": "Cookies/Cookies/Graham Cracker Retirement Puffs.htm",
+    "source_folder": "Cookies/Cookies",
     "servings": "",
     "ingredients": [
       {
-        "qty": "12 oz",
-        "item": "chocolate chips semi sweet"
+        "qty": "8 sq",
+        "item": "graham crackers (crumbs 1/2 cup)"
       },
       {
-        "qty": "1 can",
-        "item": "condensed milk"
+        "qty": "3 tbs",
+        "item": "flour"
       },
       {
-        "qty": "1 tsp",
-        "item": "vanilla"
+        "qty": "2/3 cup",
+        "item": "water"
       },
       {
-        "qty": "4 cups",
-        "item": "mini marshmallows"
+        "qty": "1/3 cup",
+        "item": "butter"
       },
       {
-        "qty": "",
-        "item": "nuts"
+        "qty": "1/8 tsp",
+        "item": "salt"
       },
       {
-        "qty": "1 cup",
-        "item": "granola cereal (no fruit) crushed"
+        "qty": "2",
+        "item": "eggs"
       }
     ],
     "steps": [
-      "Butter sides and bottom of a square pan.",
-      "Melt chips, blend in condensed milk and vanilla. Mix well. Remove from heat.",
-      "Stir in marshmallows, nuts and cereal, mix until coated.",
-      "Refrigerate until firm. Cut into squares. Keep refrigerated."
+      "Combine crumbs and flour, set aside. In saucepan over high heat, heat water, butter and salt until butter melts and mixture begins to boil. Quickly stir in crumb mixture beating vigorously until mixture leaves sides of pan in a ball. Add eggs one at a time beating until blended. Chill pan in ice water until cool. Drop batter on sheet in 6 mounds, swirling top of each.",
+      "Preheat oven to 400 degrees. Bake for 40 min. Turn off oven. With sharp knife make a small slit in each puff.",
+      "Cool. Cut off top of puffs with sharp knife.",
+      "Fill with your favorite creamy vanilla filling. I use cool whip and pudding."
     ],
     "notes": [],
     "source": "",
-    "slug": "heavenly-hash",
+    "slug": "graham-cracker-retirement-puffs",
+    "image": null
+  },
+  {
+    "title": "Grape Nut Pudding",
+    "category": "Desserts, Pies & Cakes",
+    "source_file": "Cookies/Cookies/Grape Nut Pudding.htm",
+    "source_folder": "Cookies/Cookies",
+    "servings": "Makes 6 servings",
+    "ingredients": [
+      {
+        "qty": "2",
+        "item": "eggs, slightly beaten"
+      },
+      {
+        "qty": "1/2 cup",
+        "item": "sugar"
+      },
+      {
+        "qty": "1/8 tsp",
+        "item": "salt"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "vanilla"
+      },
+      {
+        "qty": "2 cups",
+        "item": "milk, scalded"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "grape nuts"
+      },
+      {
+        "qty": "1 tbs",
+        "item": "butter"
+      }
+    ],
+    "steps": [
+      "Combine eggs, sugar, salt and vanilla. Add milk gradually mixing thoroughly.",
+      "Pour into custard cups. Sprinkle grape nut on custard mixture in cups and dot with butter.",
+      "Place cups in pan of hot water and bake in moderate oven 375 degrees for 25 minutes or until knife inserted in center comes out clean. Makes 6 servings.",
+      "NOTE butter maybe melted and combined with grape nuts before sprinkling on custard."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "grape-nut-pudding",
     "image": null
   },
   {
@@ -14950,6 +14908,47 @@
     "image": null
   },
   {
+    "title": "Special Rice Dessert (make a day ahead)",
+    "category": "Desserts, Pies & Cakes",
+    "source_file": "Rice/Rice/Special Rice Dessert (make a day ahead).htm",
+    "source_folder": "Rice/Rice",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "1 cup",
+        "item": "rice"
+      },
+      {
+        "qty": "1 cup",
+        "item": "sugar"
+      },
+      {
+        "qty": "1 can",
+        "item": "crushed pineapple, drained"
+      },
+      {
+        "qty": "1 pint",
+        "item": "whipping cream"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "vanilla"
+      },
+      {
+        "qty": "1 jar",
+        "item": "cherries, drained"
+      }
+    ],
+    "steps": [
+      "Put rice and sugar in saucepan with water, (plenty of it) boil until cooked. Fold in pineapple and refrigerate until next day.",
+      "Whip cream with vanilla, fold cream into rice, fold in cherries."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "special-rice-dessert-make-a-day-ahead",
+    "image": null
+  },
+  {
     "title": "Strawberry Dream Tart (Pizza)",
     "category": "Desserts, Pies & Cakes",
     "source_file": "Desserts/Strawberry Dream Tart (Pizza).htm",
@@ -16045,6 +16044,60 @@
     "image": "images/chocolate-pecan-thumbprints.jpg"
   },
   {
+    "title": "Chocolate Refrigerator Bars",
+    "category": "Cookies & Bars",
+    "source_file": "Desserts/Chocolate Refrigerator Bars.htm",
+    "source_folder": "Desserts",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "1/2 cup",
+        "item": "margarine"
+      },
+      {
+        "qty": "1/3 cup",
+        "item": "sugar"
+      },
+      {
+        "qty": "5 tbsp",
+        "item": "unsweetened cocoa"
+      },
+      {
+        "qty": "1",
+        "item": "egg, beaten"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "vanilla extract"
+      },
+      {
+        "qty": "1 cup",
+        "item": "flaked coconut milk"
+      },
+      {
+        "qty": "1/3 cup",
+        "item": "chopped nuts"
+      },
+      {
+        "qty": "8",
+        "item": "graham crackers crushed"
+      }
+    ],
+    "steps": [
+      "Grease 9-inch square pan",
+      "Melt margarine, sugar, in small saucepan over low heat until smooth. Stir in cocoa, egg and vanilla. Cook until mix thickens, stirring constantly. Remove from heat, stir in coconut, nuts and crushed crackers. Press mixture into pan, refrigerate 1 hour.",
+      "Butter Icing:",
+      "1/4 cup margarine, 1 3/4 cups powder sugar, sifted, 1 egg.",
+      "In a small bowl beat butter, powdered sugar and egg until smooth. Spread over refrigerated mixture. Chill until firm. Cut into bars.",
+      "Chocolate Topping:",
+      "6 oz. semi sweet chocolate, 1 tbsp butter. Melt chocolate and butter until smooth. Swirl over refrigerated mixture.Refrigerate for 3 to 4 hours. Cut into bars."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "chocolate-refrigerator-bars",
+    "image": null
+  },
+  {
     "title": "Coconut Pecan Cookies",
     "category": "Cookies & Bars",
     "source_file": "Cookies/Coconut Pecan Cookies.htm",
@@ -16265,87 +16318,6 @@
     "image": null
   },
   {
-    "title": "Dark Chocolate Sauce",
-    "category": "Cookies & Bars",
-    "source_file": "Cookies/Cookies/Dark Chocolate Sauce.htm",
-    "source_folder": "Cookies/Cookies",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "3/4 cup",
-        "item": "unsweetened cocoa"
-      },
-      {
-        "qty": "1/2 cup",
-        "item": "sugar"
-      },
-      {
-        "qty": "1/2 cup",
-        "item": "light corn syrup"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "vegetable oil"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "butter or margarine"
-      },
-      {
-        "qty": "1/4 cup",
-        "item": "water"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "vanilla extract"
-      }
-    ],
-    "steps": [
-      "Combine cocoa and sugar in medium saucepan; stir in corn syrup and oil.",
-      "Cook sauce over low heat, stirring constantly, 8 to 10 minutes or until sugar dissolves. Add butter, 1/4 cup water, and vanilla extract; cook, stirring constantly, just until butter melts. Serve warm over ice cream. (Save for other uses.)"
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "dark-chocolate-sauce",
-    "image": null
-  },
-  {
-    "title": "Devil Dog Filling",
-    "category": "Cookies & Bars",
-    "source_file": "Cookies/Cookies/Devil Dog Filling.htm",
-    "source_folder": "Cookies/Cookies",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "1/3 cup",
-        "item": "evaporated milk"
-      },
-      {
-        "qty": "2/3 cup",
-        "item": "shortening"
-      },
-      {
-        "qty": "1 1/2 cups",
-        "item": "sugar"
-      },
-      {
-        "qty": "1/4 tsp",
-        "item": "salt"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "vanilla"
-      }
-    ],
-    "steps": [
-      "Mix all ingredients together, beat for about 5 minutes until creamy."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "devil-dog-filling",
-    "image": null
-  },
-  {
     "title": "Easy Cheesy Lemon Bars",
     "category": "Cookies & Bars",
     "source_file": "Cookies/Cookies/Easy Cheesy Lemon Bars.htm",
@@ -16396,34 +16368,6 @@
     "notes": [],
     "source": "",
     "slug": "easy-cheesy-lemon-bars",
-    "image": null
-  },
-  {
-    "title": "Fat Free Frosting",
-    "category": "Cookies & Bars",
-    "source_file": "Cookies/Cookies/Fat Free Frosting.htm",
-    "source_folder": "Cookies/Cookies",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "1 pkg",
-        "item": "pudding"
-      },
-      {
-        "qty": "1 1/2 cups",
-        "item": "cold skim milk"
-      },
-      {
-        "qty": "1 env",
-        "item": "Dream Whip topping mix"
-      }
-    ],
-    "steps": [
-      "Beat milk and topping and pudding on low speed until blended and then on high fo 4-6 minutes until soft peaks form. Enough to frost a 13 x 9 cake, refrigerate."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "fat-free-frosting",
     "image": null
   },
   {
@@ -16532,96 +16476,6 @@
     "image": null
   },
   {
-    "title": "Graham Cracker Retirement Puffs",
-    "category": "Cookies & Bars",
-    "source_file": "Cookies/Cookies/Graham Cracker Retirement Puffs.htm",
-    "source_folder": "Cookies/Cookies",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "8 sq",
-        "item": "graham crackers (crumbs 1/2 cup)"
-      },
-      {
-        "qty": "3 tbs",
-        "item": "flour"
-      },
-      {
-        "qty": "2/3 cup",
-        "item": "water"
-      },
-      {
-        "qty": "1/3 cup",
-        "item": "butter"
-      },
-      {
-        "qty": "1/8 tsp",
-        "item": "salt"
-      },
-      {
-        "qty": "2",
-        "item": "eggs"
-      }
-    ],
-    "steps": [
-      "Combine crumbs and flour, set aside. In saucepan over high heat, heat water, butter and salt until butter melts and mixture begins to boil. Quickly stir in crumb mixture beating vigorously until mixture leaves sides of pan in a ball. Add eggs one at a time beating until blended. Chill pan in ice water until cool. Drop batter on sheet in 6 mounds, swirling top of each.",
-      "Preheat oven to 400 degrees. Bake for 40 min. Turn off oven. With sharp knife make a small slit in each puff.",
-      "Cool. Cut off top of puffs with sharp knife.",
-      "Fill with your favorite creamy vanilla filling. I use cool whip and pudding."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "graham-cracker-retirement-puffs",
-    "image": null
-  },
-  {
-    "title": "Grape Nut Pudding",
-    "category": "Cookies & Bars",
-    "source_file": "Cookies/Cookies/Grape Nut Pudding.htm",
-    "source_folder": "Cookies/Cookies",
-    "servings": "Makes 6 servings",
-    "ingredients": [
-      {
-        "qty": "2",
-        "item": "eggs, slightly beaten"
-      },
-      {
-        "qty": "1/2 cup",
-        "item": "sugar"
-      },
-      {
-        "qty": "1/8 tsp",
-        "item": "salt"
-      },
-      {
-        "qty": "1/2 tsp",
-        "item": "vanilla"
-      },
-      {
-        "qty": "2 cups",
-        "item": "milk, scalded"
-      },
-      {
-        "qty": "2 tbs",
-        "item": "grape nuts"
-      },
-      {
-        "qty": "1 tbs",
-        "item": "butter"
-      }
-    ],
-    "steps": [
-      "Combine eggs, sugar, salt and vanilla. Add milk gradually mixing thoroughly.",
-      "Pour into custard cups. Sprinkle grape nut on custard mixture in cups and dot with butter.",
-      "Place cups in pan of hot water and bake in moderate oven 375 degrees for 25 minutes or until knife inserted in center comes out clean. Makes 6 servings.",
-      "NOTE butter maybe melted and combined with grape nuts before sprinkling on custard."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "grape-nut-pudding",
-    "image": null
-  },
-  {
     "title": "Greek Squares",
     "category": "Cookies & Bars",
     "source_file": "Cookies/Cookies/Greek Squares.htm",
@@ -16659,6 +16513,49 @@
     "notes": [],
     "source": "",
     "slug": "greek-squares",
+    "image": null
+  },
+  {
+    "title": "Heavenly Hash",
+    "category": "Cookies & Bars",
+    "source_file": "Desserts/PiesCakes/Heavenly Hash.htm",
+    "source_folder": "Desserts/PiesCakes",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "12 oz",
+        "item": "chocolate chips semi sweet"
+      },
+      {
+        "qty": "1 can",
+        "item": "condensed milk"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "vanilla"
+      },
+      {
+        "qty": "4 cups",
+        "item": "mini marshmallows"
+      },
+      {
+        "qty": "",
+        "item": "nuts"
+      },
+      {
+        "qty": "1 cup",
+        "item": "granola cereal (no fruit) crushed"
+      }
+    ],
+    "steps": [
+      "Butter sides and bottom of a square pan.",
+      "Melt chips, blend in condensed milk and vanilla. Mix well. Remove from heat.",
+      "Stir in marshmallows, nuts and cereal, mix until coated.",
+      "Refrigerate until firm. Cut into squares. Keep refrigerated."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "heavenly-hash",
     "image": null
   },
   {
@@ -17365,6 +17262,62 @@
     "image": null
   },
   {
+    "title": "Barbeque Sauce",
+    "category": "Sauces & Seasonings",
+    "source_file": "Meats/Pork/Barbeque Sauce.htm",
+    "source_folder": "Meats/Pork",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "1/2 cup",
+        "item": "Wesson oil"
+      },
+      {
+        "qty": "3/4 cup",
+        "item": "chopped onions"
+      },
+      {
+        "qty": "3/4 cup",
+        "item": "ketchup"
+      },
+      {
+        "qty": "3/4 cup",
+        "item": "water"
+      },
+      {
+        "qty": "1/3 cup",
+        "item": "lemon juice"
+      },
+      {
+        "qty": "3 b",
+        "item": "sugar"
+      },
+      {
+        "qty": "3 tbs",
+        "item": "Worcestershire sauce"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "mustard"
+      },
+      {
+        "qty": "2 tsp",
+        "item": "salt"
+      },
+      {
+        "qty": "1/2 tsp",
+        "item": "pepper"
+      }
+    ],
+    "steps": [
+      "Cook onion until soft in hot oil. Add remaining ingredients. Simmer for 1 minutes."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "barbeque-sauce",
+    "image": null
+  },
+  {
     "title": "Basic Barbecue Sauce",
     "category": "Sauces & Seasonings",
     "source_file": "Miscellaneous/Basic Barbecue Sauce.htm",
@@ -17545,6 +17498,51 @@
     "image": null
   },
   {
+    "title": "Dark Chocolate Sauce",
+    "category": "Sauces & Seasonings",
+    "source_file": "Cookies/Cookies/Dark Chocolate Sauce.htm",
+    "source_folder": "Cookies/Cookies",
+    "servings": "",
+    "ingredients": [
+      {
+        "qty": "3/4 cup",
+        "item": "unsweetened cocoa"
+      },
+      {
+        "qty": "1/2 cup",
+        "item": "sugar"
+      },
+      {
+        "qty": "1/2 cup",
+        "item": "light corn syrup"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "vegetable oil"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "butter or margarine"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "water"
+      },
+      {
+        "qty": "1 tsp",
+        "item": "vanilla extract"
+      }
+    ],
+    "steps": [
+      "Combine cocoa and sugar in medium saucepan; stir in corn syrup and oil.",
+      "Cook sauce over low heat, stirring constantly, 8 to 10 minutes or until sugar dissolves. Add butter, 1/4 cup water, and vanilla extract; cook, stirring constantly, just until butter melts. Serve warm over ice cream. (Save for other uses.)"
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "dark-chocolate-sauce",
+    "image": null
+  },
+  {
     "title": "Emeril's Essence",
     "category": "Sauces & Seasonings",
     "source_file": "Spices/Emerils Essence.htm",
@@ -17706,6 +17704,68 @@
     "notes": [],
     "source": "",
     "slug": "herbs-seasoning-blend",
+    "image": null
+  },
+  {
+    "title": "Molasses BBQ Sauce",
+    "category": "Sauces & Seasonings",
+    "source_file": "Meats/Pork/Molasses BBQ Sauce.htm",
+    "source_folder": "Meats/Pork",
+    "servings": "Makes 4 cups",
+    "ingredients": [
+      {
+        "qty": "1 cup",
+        "item": "cider vinegar"
+      },
+      {
+        "qty": "1 tbs",
+        "item": "grated ginger"
+      },
+      {
+        "qty": "2 tbs",
+        "item": "dry mustard"
+      },
+      {
+        "qty": "1 1/4 cups",
+        "item": "ketchup"
+      },
+      {
+        "qty": "5 tbs",
+        "item": "Worcestershire sauce"
+      },
+      {
+        "qty": "1 clove",
+        "item": "garlic, crushed ice"
+      },
+      {
+        "qty": "1 cup",
+        "item": "molasses"
+      },
+      {
+        "qty": "1",
+        "item": "lemon, sliced"
+      },
+      {
+        "qty": "3 tbs",
+        "item": "butter, melted"
+      },
+      {
+        "qty": "",
+        "item": "salt to taste"
+      },
+      {
+        "qty": "1/4 cup",
+        "item": "lemon juice"
+      }
+    ],
+    "steps": [
+      "Using an enamel or stainless steel sauce pan, combine the vinegar, ginger, mustard, Worcestershire sauce, garlic, molasses and lemon slices. Bring to a boil and reduce heat to a simmer. Cook 20 minutes. Stir in butter and cook 5 minutes more. Remove from heat and add salt and lemon juice. Allow to cool and strain before sing, Makes 4 cups.",
+      "Like so many sauces, this one gets better with age. It should keep, refrigerated, for several weeks.",
+      "The secret to good barbecuing is to add the sauce during the last few minutes of cooking, otherwise the high sugar content burns before the meat or poultry is done."
+    ],
+    "notes": [],
+    "source": "",
+    "slug": "molasses-bbq-sauce",
     "image": null
   },
   {
@@ -17945,66 +18005,6 @@
     "notes": [],
     "source": "",
     "slug": "bar-b-q-beans",
-    "image": null
-  },
-  {
-    "title": "Chili",
-    "category": "Miscellaneous",
-    "source_file": "Miscellaneous/CHILI.htm",
-    "source_folder": "Miscellaneous",
-    "servings": "",
-    "ingredients": [
-      {
-        "qty": "2 lbs",
-        "item": "hamburger"
-      },
-      {
-        "qty": "2 cups",
-        "item": "chopped onions"
-      },
-      {
-        "qty": "2 cans",
-        "item": "tomatoes (14 oz.)"
-      },
-      {
-        "qty": "1 can",
-        "item": "tomato sauce (7 oz)"
-      },
-      {
-        "qty": "Dash",
-        "item": "Tabasco (to taste)"
-      },
-      {
-        "qty": "2 can",
-        "item": "kidney beans (16 oz)"
-      },
-      {
-        "qty": "2 can",
-        "item": "beans (vegetarian)"
-      },
-      {
-        "qty": "1 tsp",
-        "item": "sugar"
-      },
-      {
-        "qty": "2 tsp",
-        "item": "salt"
-      },
-      {
-        "qty": "2 tbsp",
-        "item": "chili powder"
-      },
-      {
-        "qty": "can",
-        "item": "kernel corn for color"
-      }
-    ],
-    "steps": [
-      "Brown meat and onions in large pan. Stir in tomatoes, tomato sauce, liquid from kidney beans and seasonings. Simmer uncovered 45 minutes stirring occasionally. Add (2) beans and corn. Cook 15 minutes more. Tabasco to taste. Add more beans if necessary or needed.."
-    ],
-    "notes": [],
-    "source": "",
-    "slug": "chili",
     "image": null
   },
   {
