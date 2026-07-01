@@ -10,3 +10,6 @@ Poppa's.zip
 .DS_Store
 __MACOSX/
 *.swp
+
+# stray dropped image (lives at site/images/meat-pie.jpg)
+Image.jpg
