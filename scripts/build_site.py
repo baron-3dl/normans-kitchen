@@ -306,7 +306,8 @@ def build_group_page(group, by_slug):
     <p class="breadcrumb"><a href="{base}index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="{base}index.html?c={quote(group['category'])}">{E(group['category'])}</a></p>
     <h1 class="recipe-title">{E(dish)}</h1>
     <div class="recipe-rule"></div>
-    <p class="versions-intro">Poppa kept <strong>{len(members)}</strong> versions of this — pick one:</p>
+    <p class="versions-intro">Poppa kept <strong>{len(members)}</strong> versions of this dish.</p>
+    <p class="versions-note">Follow any recipe, mix and match, or use for inspiration for your own version. <em>That's how Poppa did it.</em></p>
     <div class="versions" role="tablist" aria-label="Versions of {E(dish)}">
       {pills}
     </div>
