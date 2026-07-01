@@ -1,0 +1,12 @@
+# Node (only used for the local Playwright test)
+node_modules/
+package-lock.json
+
+# The original archive & Windows zone metadata
+Poppa's.zip
+*.zip:Zone.Identifier
+
+# OS / editor cruft
+.DS_Store
+__MACOSX/
+*.swp
