@@ -55,12 +55,16 @@
     });
   });
 
-  // support ?c=Category and #Category deep links from other pages
-  var params = new URLSearchParams(window.location.search);
-  var initCat = params.get("c") || decodeURIComponent((window.location.hash || "").replace(/^#/, ""));
-  if (initCat) {
-    var match = chips.filter(function (c) { return c.getAttribute("data-cat") === initCat; })[0];
-    if (match) match.click();
-  }
+  // support ?c=Category and #Category deep links from other pages.
+  // Guard against malformed URLs so a bad hash never disables search.
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var hash = (window.location.hash || "").replace(/^#/, "");
+    var initCat = params.get("c") || (hash ? decodeURIComponent(hash) : "");
+    if (initCat) {
+      var match = chips.filter(function (c) { return c.getAttribute("data-cat") === initCat; })[0];
+      if (match) match.click();
+    }
+  } catch (e) { /* ignore malformed deep-link */ }
   apply();
 })();

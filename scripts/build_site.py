@@ -4,7 +4,7 @@ Generate the static site from data/recipes.json.
 
 Emits into site/:
   index.html            home: search + category filter + full card grid
-  recipe/<slug>.html    one page per recipe (print-friendly)
+  recipe/<slug>.html    one page per recipe (print-friendly, Recipe JSON-LD)
   about.html            About Poppa (placeholder to fill in)
   404.html, sitemap.xml, robots.txt, .nojekyll, favicon.svg
 
@@ -13,7 +13,7 @@ Re-runnable: safe to delete site/recipe and regenerate.
 """
 from __future__ import annotations
 import json, html, shutil
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 from pathlib import Path
 from collections import Counter
 
@@ -24,6 +24,7 @@ SITE = ROOT / "site"
 SITE_TITLE = "Poppa's Recipes"
 TAGLINE = "recipes worth keeping"
 BASE_URL = "https://baron-3dl.github.io/normans-kitchen"
+PATH_PREFIX = (urlsplit(BASE_URL).path.rstrip("/") or "") + "/"   # "/normans-kitchen/"
 
 CATEGORIES = [
     "Chicken & Poultry", "Beef", "Pork", "Meats", "Fish & Seafood", "Pasta",
@@ -36,7 +37,6 @@ E = html.escape
 
 
 def favicon_svg() -> str:
-    # a little cream pot with a warm-red lid — drawn inline, nothing to load
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
         '<rect width="64" height="64" rx="10" fill="#f8f1e0"/>'
@@ -47,7 +47,10 @@ def favicon_svg() -> str:
     )
 
 
-def head(title: str, desc: str, base: str, canonical: str) -> str:
+def head(title, desc, base, canonical, image="", extra_head=""):
+    og_img = f'<meta property="og:image" content="{E(image)}">\n' if image else ""
+    tw_card = "summary_large_image" if image else "summary"
+    tw_img = f'<meta name="twitter:image" content="{E(image)}">\n' if image else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -59,34 +62,42 @@ def head(title: str, desc: str, base: str, canonical: str) -> str:
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:type" content="website">
-<link rel="icon" href="{base}favicon.svg" type="image/svg+xml">
+<meta property="og:url" content="{E(canonical)}">
+<meta property="og:site_name" content="{E(SITE_TITLE)}">
+{og_img}<meta name="twitter:card" content="{tw_card}">
+<meta name="twitter:title" content="{E(title)}">
+<meta name="twitter:description" content="{E(desc)}">
+{tw_img}<link rel="icon" href="{base}favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{base}assets/style.css">
-</head>
+{extra_head}</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 """
 
 
-def header(base: str, current: str, compact: bool = False) -> str:
+def header(base, current, compact=False):
+    # exactly one <h1> per page: the wordmark is the h1 on the home page; on
+    # recipe/about pages the page's own title is the h1, so the wordmark is a <p>.
+    tag = "h1" if current == "home" else "p"
     nav = f"""<nav class="topnav" aria-label="Primary">
   <a href="{base}index.html"{' aria-current="page"' if current=='home' else ''}>All Recipes</a>
   <a href="{base}about.html"{' aria-current="page"' if current=='about' else ''}>About Poppa</a>
 </nav>"""
     if compact:
-        return f"""<header class="site-header" style="padding-bottom:.6rem">
+        return f"""<header class="site-header compact">
 <div class="wrap">
-  <h1 class="wordmark" style="font-size:clamp(1.8rem,5vw,2.6rem)"><a href="{base}index.html">{E(SITE_TITLE)}</a></h1>
+  <{tag} class="wordmark small"><a href="{base}index.html">{E(SITE_TITLE)}</a></{tag}>
   {nav}
 </div>
 </header>
 """
     return f"""<header class="site-header">
 <div class="wrap">
-  <div class="masthead-rule"><span>✦</span></div>
-  <h1 class="wordmark"><a href="{base}index.html">{E(SITE_TITLE)}</a></h1>
+  <div class="masthead-rule"><span>&#10022;</span></div>
+  <{tag} class="wordmark"><a href="{base}index.html">{E(SITE_TITLE)}</a></{tag}>
   <p class="tagline">{E(TAGLINE)}</p>
   <p class="subtag">A family collection</p>
   {nav}
@@ -95,7 +106,7 @@ def header(base: str, current: str, compact: bool = False) -> str:
 """
 
 
-def footer(base: str) -> str:
+def footer(base):
     return f"""<footer class="site-footer">
 <div class="wrap">
   <p>Poppa's recipes, gathered and kept for the family. Made with <span class="heart">&hearts;</span></p>
@@ -106,14 +117,18 @@ def footer(base: str) -> str:
 </html>"""
 
 
-def search_signature(r: dict) -> str:
+def ing_line(i):
+    return (f'{i["qty"]} {i["item"]}'.strip() if i.get("qty") else i["item"])
+
+
+def search_signature(r):
     parts = [r["title"], r["category"]]
     for i in r["ingredients"]:
         parts.append(i.get("item", "") or i.get("heading", ""))
     return " ".join(parts).lower()
 
 
-def card(r: dict) -> str:
+def card(r):
     has_photo = bool(r.get("image"))
     photo = ""
     if has_photo:
@@ -127,14 +142,53 @@ def card(r: dict) -> str:
     {photo}
     <div class="card-body">
       <span class="card-kicker">{E(r['category'])}</span>
-      <span class="card-title">{E(r['title'])}</span>
+      <h2 class="card-title">{E(r['title'])}</h2>
       <span class="card-meta">{meta}</span>
     </div>
   </a>
 </article>"""
 
 
-def build_index(recipes: list[dict]) -> str:
+def clean_desc(r):
+    items = [i["item"] for i in r["ingredients"] if "item" in i]
+    lead = f'Poppa\'s recipe for {r["title"]}'
+    if r.get("category"):
+        lead += f' ({r["category"]})'
+    if items:
+        acc, out = 0, []
+        for it in items:
+            if acc + len(it) > 120:
+                break
+            out.append(it); acc += len(it) + 2
+        if out:
+            lead += " — " + ", ".join(out)
+            if len(out) < len(items):
+                lead += "…"
+    return lead + "."
+
+
+def recipe_jsonld(r):
+    ings = [ing_line(i) for i in r["ingredients"] if "item" in i]  # skip heading rows
+    data = {
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "name": r["title"],
+        "recipeCategory": r["category"],
+        "recipeIngredient": ings,
+        "recipeInstructions": [{"@type": "HowToStep", "text": s} for s in r["steps"]],
+        "url": f'{BASE_URL}/recipe/{r["slug"]}.html',
+    }
+    if r.get("image"):
+        data["image"] = f'{BASE_URL}/{r["image"]}'
+    if r.get("servings"):
+        data["recipeYield"] = r["servings"]
+    if r.get("source"):
+        data["author"] = {"@type": "Organization", "name": r["source"]}
+    payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+    return f'<script type="application/ld+json">{payload}</script>\n'
+
+
+def build_index(recipes):
     counts = Counter(r["category"] for r in recipes)
     chips = "\n".join(
         f'<button class="chip" data-cat="{E(c, quote=True)}" aria-pressed="false">'
@@ -154,17 +208,17 @@ def build_index(recipes: list[dict]) -> str:
   <div class="controls">
     <div class="search-box">
       {magnifier}
-      <input id="search" type="search" placeholder="Search {len(recipes)} recipes — try “chicken”, “cabbage”, “chocolate”…" aria-label="Search recipes" autocomplete="off">
+      <input id="search" type="search" placeholder="Search {len(recipes)} recipes — try “chicken”, “cabbage”, “chocolate”…" aria-label="Search recipes by name, category, or ingredient" autocomplete="off">
     </div>
     <div class="category-bar" role="group" aria-label="Filter by category">
       {chips}
     </div>
-    <p class="result-meta" id="result-meta">{len(recipes)} recipes in the collection</p>
+    <p class="result-meta" id="result-meta" role="status" aria-live="polite" aria-atomic="true">{len(recipes)} recipes in the collection</p>
   </div>
 
   <div class="recipe-grid" id="recipe-grid">
     {cards}
-    <p class="no-results" id="no-results" style="display:none">No recipes match — try another word.</p>
+    <p class="no-results" id="no-results" role="status" style="display:none">No recipes match — try another word.</p>
   </div>
 </main>
 """
@@ -173,9 +227,8 @@ def build_index(recipes: list[dict]) -> str:
     )
 
 
-def build_recipe(r: dict) -> str:
+def build_recipe(r):
     base = "../"
-    # ingredients
     ing_html = []
     for i in r["ingredients"]:
         if "heading" in i:
@@ -183,11 +236,9 @@ def build_recipe(r: dict) -> str:
         else:
             qty = E(i.get("qty", ""))
             item = E(i.get("item", ""))
-            qty_span = f'<span class="qty">{qty}</span>' if qty else '<span class="qty"></span>'
-            ing_html.append(f'<li>{qty_span}<span class="item">{item}</span></li>')
+            ing_html.append(f'<li><span class="qty">{qty}</span><span class="item">{item}</span></li>')
     ingredients = "\n".join(ing_html)
 
-    # method
     steps = r["steps"]
     if len(steps) <= 1:
         body = "".join(f'<li class="single-block">{E(s)}</li>' for s in steps)
@@ -195,7 +246,6 @@ def build_recipe(r: dict) -> str:
     else:
         method = "<ol>\n" + "\n".join(f'<li>{E(s)}</li>' for s in steps) + "\n</ol>"
 
-    # notes + source provenance
     notes_block = ""
     parts = [f'<p class="note">{E(n)}</p>' for n in r.get("notes", [])]
     if r.get("source"):
@@ -204,18 +254,16 @@ def build_recipe(r: dict) -> str:
         notes_block = ('<section class="recipe-notes"><h3>Notes</h3>\n'
                        + "\n".join(parts) + '</section>')
 
-    photo = ""
-    if r.get("image"):
-        photo = f'<img class="recipe-photo" src="{base}{E(r["image"])}" alt="{E(r["title"])}">'
-
+    image_url = f'{BASE_URL}/{r["image"]}' if r.get("image") else ""
+    photo = f'<img class="recipe-photo" src="{base}{E(r["image"])}" alt="{E(r["title"])}">' if r.get("image") else ""
     servings = f'<p class="recipe-servings">{E(r["servings"])}</p>' if r.get("servings") else ""
 
-    first_items = ", ".join(i["item"] for i in r["ingredients"] if "item" in i)[:150]
-    desc = f'Poppa\'s recipe for {r["title"]} — {first_items}'.strip()
+    desc = clean_desc(r)
     canonical = f'{BASE_URL}/recipe/{r["slug"]}.html'
 
     return (
-        head(f'{r["title"]} — {SITE_TITLE}', desc, base, canonical)
+        head(f'{r["title"]} — {SITE_TITLE}', desc, base, canonical,
+             image=image_url, extra_head=recipe_jsonld(r))
         + header(base, "", compact=True)
         + f"""<main id="main" class="wrap">
   <article class="recipe">
@@ -237,6 +285,7 @@ def build_recipe(r: dict) -> str:
         {notes_block}
       </div>
     </div>
+    <p class="print-source">{BASE_URL}/recipe/{r["slug"]}.html</p>
     <div class="recipe-foot">
       <a class="btn" href="{base}index.html">&larr; All recipes</a>
       <button class="btn" onclick="window.print()">Print this recipe</button>
@@ -248,7 +297,7 @@ def build_recipe(r: dict) -> str:
     )
 
 
-def build_about() -> str:
+def build_about():
     desc = "About Poppa — the cook behind the recipes."
     return (
         head(f"About Poppa — {SITE_TITLE}", desc, "", BASE_URL + "/about.html")
@@ -276,20 +325,21 @@ def build_about() -> str:
     )
 
 
-def build_404() -> str:
+def build_404():
+    base = PATH_PREFIX
     return (
-        head(f"Not found — {SITE_TITLE}", "Page not found", "/normans-kitchen/", BASE_URL + "/404.html")
-        + header("/normans-kitchen/", "")
-        + """<main id="main" class="wrap" style="text-align:center; padding:3rem 0;">
-  <h2 style="font-family:var(--serif-display); font-size:2rem;">This recipe went out of the oven.</h2>
-  <p>We couldn't find that page. <a href="/normans-kitchen/index.html">Back to all recipes &rarr;</a></p>
+        head(f"Not found — {SITE_TITLE}", "Page not found", base, BASE_URL + "/404.html")
+        + header(base, "")
+        + f"""<main id="main" class="wrap" style="text-align:center; padding:3rem 0;">
+  <h1 style="font-family:var(--serif-display); font-size:2rem;">This recipe went out of the oven.</h1>
+  <p>We couldn't find that page. <a href="{base}index.html">Back to all recipes &rarr;</a></p>
 </main>
 """
-        + footer("/normans-kitchen/")
+        + footer(base)
     )
 
 
-def build_sitemap(recipes: list[dict]) -> str:
+def build_sitemap(recipes):
     urls = [f"{BASE_URL}/", f"{BASE_URL}/about.html"]
     urls += [f'{BASE_URL}/recipe/{r["slug"]}.html' for r in recipes]
     items = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)
@@ -299,7 +349,10 @@ def build_sitemap(recipes: list[dict]) -> str:
 def main():
     recipes = json.loads(DATA.read_text(encoding="utf-8"))
 
-    # clean + regenerate recipe pages
+    dups = [s for s, n in Counter(r["slug"] for r in recipes).items() if n > 1]
+    if dups:
+        raise SystemExit(f"Duplicate slugs would overwrite recipe pages: {dups}")
+
     rec_dir = SITE / "recipe"
     if rec_dir.exists():
         shutil.rmtree(rec_dir)
@@ -317,7 +370,8 @@ def main():
         (rec_dir / f'{r["slug"]}.html').write_text(build_recipe(r), encoding="utf-8")
 
     print(f"Built site: index + about + 404 + {len(recipes)} recipe pages")
-    print(f"  photos: {sum(1 for r in recipes if r.get('image'))}")
+    print(f"  photos: {sum(1 for r in recipes if r.get('image'))} | "
+          f"JSON-LD on every recipe page")
 
 
 if __name__ == "__main__":
