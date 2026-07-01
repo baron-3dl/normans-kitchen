@@ -258,7 +258,7 @@ class Site:
 
     def credit_html(self, slug):
         c = self.img.get(slug)
-        if not c:
+        if not c or not c.get("license"):   # no entry, or a hand-dropped family photo
             return ""
         who = E(c.get("creator") or "Unknown")
         lic = E(c.get("license") or "")

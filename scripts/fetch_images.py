@@ -69,6 +69,24 @@ def relevant(results, want: set[str]):
     return out
 
 
+def save_web(path, data, maxw=900):
+    """Downscale to a sane web size and save as optimized JPEG. Returns True on success."""
+    try:
+        from PIL import Image
+        import io
+        im = Image.open(io.BytesIO(data)).convert("RGB")
+        if im.width > maxw:
+            im = im.resize((maxw, round(im.height * maxw / im.width)), Image.LANCZOS)
+        im.save(path, "JPEG", quality=82, optimize=True)
+        return True
+    except Exception:
+        try:
+            path.write_bytes(data)  # PIL unavailable — keep the original
+            return True
+        except Exception:
+            return False
+
+
 def download_image(r):
     """Try the Openverse thumbnail then the original url; return image bytes or None."""
     for src in (r.get("thumbnail"), r.get("url")):
@@ -115,8 +133,7 @@ def main():
                 cands = relevant(search(simple), want)
         for hit in cands[:4]:             # try candidates until one actually downloads
             img = download_image(hit)
-            if img:
-                (OUT_DIR / f"{slug}.jpg").write_bytes(img)
+            if img and save_web(OUT_DIR / f"{slug}.jpg", img):
                 store[slug] = {"file": f"images/web/{slug}.jpg", **credit(hit)}
                 got += 1
                 break

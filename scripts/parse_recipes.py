@@ -85,6 +85,12 @@ CATEGORY_OVERRIDES = {
 }
 
 
+# Hand-dropped family photos: source path -> image path already placed under site/.
+IMAGE_OVERRIDES = {
+    "Meats/Meat Pie.htm": "images/meat-pie.jpg",
+}
+
+
 def categorize(rel_parts: list[str], title: str) -> str:
     p = [s.lower() for s in rel_parts]
     joined = "/".join(p)
@@ -404,6 +410,7 @@ def parse_file(path: Path) -> dict | None:
         "notes": notes,
         "source": source,
         "_image_src": str(image) if image else None,
+        "_image_override": IMAGE_OVERRIDES.get(source_file),
     }
 
 
@@ -448,14 +455,17 @@ def main():
             slug = f"{base}-{n}"; n += 1
         used.add(slug)
         rec["slug"] = slug
-        if rec["_image_src"]:
+        if rec.get("_image_override"):          # a family photo dropped in by hand
+            rec["image"] = rec["_image_override"]
+        elif rec["_image_src"]:
             src = Path(rec["_image_src"])
             ext = ".jpg" if src.suffix.lower() == ".jpeg" else src.suffix.lower()
             shutil.copyfile(src, IMG_OUT / f"{slug}{ext}")
             rec["image"] = f"images/{slug}{ext}"
         else:
             rec["image"] = None
-        del rec["_image_src"]
+        rec.pop("_image_src", None)
+        rec.pop("_image_override", None)
 
     DATA.mkdir(parents=True, exist_ok=True)
     (DATA / "recipes.json").write_text(
