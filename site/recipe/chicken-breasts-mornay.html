@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chicken Breasts Mornay — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Chicken Breasts Mornay (Chicken &amp; Poultry) — skinless, boneless breasts, salt and pepper to taste, butter, thinly sliced mushrooms, flour, milk, heavy cream….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +35,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Chicken%20%26%20Poultry">Chicken &amp; Poultry</a></p>
+    
     <h1 class="recipe-title">Chicken Breasts Mornay</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     <p class="recipe-servings">Serves 4</p>
+    
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -60,7 +64,7 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Sprinkle the chicken pieces with salt and pepper.</li>
 <li>Melt one tablespoon butter in a heavy skillet. When it is very hot, add the chicken and cook until lightly golden on both sides, about 2 minutes to a side. Sprinkle the mushroom over and around the chicken pieces. Cover and cook about five minutes. Do not overcook or the chicken will become dry.</li>
 <li>Transfer the chicken pieces to a baking dish. Using a slotted spoon, remove the mushrooms and arrange them over the chicken pieces. Let the cooking liquid remain in the skillet.</li>
@@ -71,10 +75,23 @@
 <li>Spoon the sauce over the chicken smoothing it over neatly. Sprinkle with parmesan cheese. Place the dish in the oven and bake about 10 minutes or until the chicken is piping hot and the sauce bubbling.</li>
 <li>Run the dish under the broiler until mixture is nicely browned.</li>
 <li>Serve with buttered noodles and salad. Serves 4.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Sprinkle the chicken pieces with salt and pepper.</li>
+<li>Melt one tablespoon butter in a heavy skillet. When it is very hot, add the chicken and cook until lightly golden on both sides, about 2 minutes to a side. Sprinkle the mushroom over and around the chicken pieces. Cover and cook about five minutes. Do not overcook or the chicken will become dry.</li>
+<li>Transfer the chicken pieces to a baking dish. Using a slotted spoon, remove the mushrooms and arrange them over the chicken pieces. Let the cooking liquid remain in the skillet.</li>
+<li>Meanwhile, melt the remaining butte in a saucepan and add the flour, stirring with a wire whisk. When blended and smooth, add the milk and cook, stirring until the mixture is thickened.</li>
+<li>Spoon the sauce into the skillet and bring to a boil and add the salt and pepper to taste and cayenne pepper. Let simmer about five minutes.</li>
+<li>Remove the sauce from the heat and add the egg yolk, stirring rapidly with a wire whisk. Add the grated Swiss and stir until melted. Add any drippings that may have accumulated around the chicken and mushrooms. Stir.</li>
+<li>Preheat oven to 400 degrees.</li>
+<li>Spoon the sauce over the chicken smoothing it over neatly. Sprinkle with parmesan cheese. Place the dish in the oven and bake about 10 minutes or until the chicken is piping hot and the sauce bubbling.</li>
+<li>Run the dish under the broiler until mixture is nicely browned.</li>
+<li>Serve with buttered noodles and salad. Serves 4.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/chicken-breasts-mornay.html</p>
     <div class="recipe-foot">
@@ -89,6 +106,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

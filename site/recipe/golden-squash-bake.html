@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Golden Squash Bake — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Golden Squash Bake (Vegetables) — yellow squash, onions, chopped, minced garlic, Coarse salt, ground pepper to taste, olive oil….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Vegetables">Vegetables</a></p>
+    
     <h1 class="recipe-title">Golden Squash Bake</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -55,14 +59,20 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Preheat oven to 350 degrees.</li>
 <li>Cut the squash into 1 inch cubes and place in a large bowl, Toss with the onions,garlic, coarse salt and pepper and 1/4 cup olive oil</li>
 <li>Place the vegetables in a shallow baking pan to fit and bake until tender, tossing once or twice, about 1 1/4 hours. Transfer the mixture to a bowl, season generously with more salt and pepper, and drizzle with extra olive oil, if you like. toss with basil and serve immediately. Serve 4 to 6</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Preheat oven to 350 degrees.</li>
+<li>Cut the squash into 1 inch cubes and place in a large bowl, Toss with the onions,garlic, coarse salt and pepper and 1/4 cup olive oil</li>
+<li>Place the vegetables in a shallow baking pan to fit and bake until tender, tossing once or twice, about 1 1/4 hours. Transfer the mixture to a bowl, season generously with more salt and pepper, and drizzle with extra olive oil, if you like. toss with basil and serve immediately. Serve 4 to 6</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/golden-squash-bake.html</p>
     <div class="recipe-foot">
@@ -77,6 +87,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

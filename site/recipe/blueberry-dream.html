@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blueberry Dream — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Blueberry Dream (Desserts, Pies &amp; Cakes) — graham cracker crumbs, butter or margarine, melted, pkg cream cheese, sifted powdered sugar, pkg whipped topping mix….">
@@ -11,9 +12,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://baron-3dl.github.io/normans-kitchen/recipe/blueberry-dream.html">
 <meta property="og:site_name" content="Poppa&#x27;s Recipes">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/blueberry-dream.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Blueberry Dream — Poppa&#x27;s Recipes">
 <meta name="twitter:description" content="Poppa&#x27;s recipe for Blueberry Dream (Desserts, Pies &amp; Cakes) — graham cracker crumbs, butter or margarine, melted, pkg cream cheese, sifted powdered sugar, pkg whipped topping mix….">
+<meta name="twitter:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/blueberry-dream.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +28,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +37,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Desserts%2C%20Pies%20%26%20Cakes">Desserts, Pies &amp; Cakes</a></p>
+    <div class="view-tabs" role="tablist" aria-label="Recipe view"><a class="view-tab" data-view="enhanced" href="#" role="tab">Enhanced</a><a class="view-tab" data-view="original" href="#" role="tab">Original</a></div>
     <h1 class="recipe-title">Blueberry Dream</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     
+    <div class="only-enhanced recipe-photo-slot"><img class="recipe-photo" src="../images/web/blueberry-dream.jpg" alt="Blueberry Dream" loading="lazy"><p class="photo-credit">Photo: <a href="https://www.flickr.com/photos/20324540@N00/6089717781" target="_blank" rel="noopener">CanadaPenguin</a> (CC BY-SA 2.0)</p></div>
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -57,15 +63,22 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Combine cracker crumbs and butter; stir well. Set aside 2 tablespoons crumb mixture. Press remaining crumb mixture into and ungreased 12 x 8 x 2 inch baking dish. Bake at 350 degrees for 8 minutes. Cool.</li>
 <li>Place cream cheese in a large mixing bowl; beat at high speed of an electric mixer until fluffy. Add powdered sugar, and mix well. Set aside.</li>
 <li>Combine whipped topping mix, milk and vanilla in large mixing bowl. Beat at high speed of electric mixer about 4 minutes or until topping is light and fluffy. Fold whipped topping into creamed mixture.</li>
 <li>Spread half of whipped topping mixture over crust. Spoon pie filling over whipped topping mixture. Spread remaining whipped topping mixture over pie filling. Sprinkle reserved crumb mixture over top. Chill 8 hours. Yield: about 8-10 servings</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Combine cracker crumbs and butter; stir well. Set aside 2 tablespoons crumb mixture. Press remaining crumb mixture into and ungreased 12 x 8 x 2 inch baking dish. Bake at 350 degrees for 8 minutes. Cool.</li>
+<li>Place cream cheese in a large mixing bowl; beat at high speed of an electric mixer until fluffy. Add powdered sugar, and mix well. Set aside.</li>
+<li>Combine whipped topping mix, milk and vanilla in large mixing bowl. Beat at high speed of electric mixer about 4 minutes or until topping is light and fluffy. Fold whipped topping into creamed mixture.</li>
+<li>Spread half of whipped topping mixture over crust. Spoon pie filling over whipped topping mixture. Spread remaining whipped topping mixture over pie filling. Sprinkle reserved crumb mixture over top. Chill 8 hours. Yield: about 8-10 servings</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/blueberry-dream.html</p>
     <div class="recipe-foot">
@@ -80,6 +93,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

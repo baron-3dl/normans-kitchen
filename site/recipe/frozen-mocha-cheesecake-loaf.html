@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frozen Mocha Cheesecake Loaf — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Frozen Mocha Cheesecake Loaf (Desserts, Pies &amp; Cakes) — fat free chocolate sandwich crumbs, butter, melted, 8 oz fat free cream cheese, 14 oz fat fat free condensed milk….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +35,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Desserts%2C%20Pies%20%26%20Cakes">Desserts, Pies &amp; Cakes</a></p>
+    
     <h1 class="recipe-title">Frozen Mocha Cheesecake Loaf</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     <p class="recipe-servings">Serves 12</p>
+    
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -58,15 +62,22 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Line a 9 inch by 5 by 3 inch loaf pan with heavy duty foil. In a small bowl, combine cookie crumbs and butter. Press firmly onto bottom and 1/2 inch up sides of prepared pan.</li>
 <li>In a large mixing bowl, beat cream cheese until light and fluffy. Add milk and vanilla; mix well. Fold in whipped topping. Spoon half of the mixture into another bowl and set aside.</li>
 <li>Dissolve coffee granules in hot water; fold into remaining cream cheese mixture. Fold in chocolate syrup.</li>
 <li>Spoon half other chocolate mixture over crust. top with half of the reserved cream cheese mixture. repeat layers (pan will be full). Freeze, uncovered, for 6 hours or until set. Cover and freeze until serving. Use foil to lift out of pan; cut into slices. Serves 12</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Line a 9 inch by 5 by 3 inch loaf pan with heavy duty foil. In a small bowl, combine cookie crumbs and butter. Press firmly onto bottom and 1/2 inch up sides of prepared pan.</li>
+<li>In a large mixing bowl, beat cream cheese until light and fluffy. Add milk and vanilla; mix well. Fold in whipped topping. Spoon half of the mixture into another bowl and set aside.</li>
+<li>Dissolve coffee granules in hot water; fold into remaining cream cheese mixture. Fold in chocolate syrup.</li>
+<li>Spoon half other chocolate mixture over crust. top with half of the reserved cream cheese mixture. repeat layers (pan will be full). Freeze, uncovered, for 6 hours or until set. Cover and freeze until serving. Use foil to lift out of pan; cut into slices. Serves 12</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/frozen-mocha-cheesecake-loaf.html</p>
     <div class="recipe-foot">
@@ -81,6 +92,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

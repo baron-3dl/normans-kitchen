@@ -58,7 +58,7 @@ a:hover { color: var(--red-bright); text-decoration: underline; }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2.5rem); }
 
 /* ---------------------------------------------------------------- header */
-.site-header { padding: clamp(2.2rem, 6vw, 4rem) 0 1.4rem; text-align: center; }
+.site-header { padding: clamp(2.2rem, 6vw, 4rem) 0 1.4rem; text-align: center; position: relative; }
 .site-header.compact { padding: 1.4rem 0 .8rem; }
 .masthead-rule {
   display: flex; align-items: center; justify-content: center;
@@ -312,6 +312,48 @@ a:hover { color: var(--red-bright); text-decoration: underline; }
 .site-footer .heart { color: var(--red); }
 .site-footer a { color: var(--red); display: inline-block; padding: .3rem .2rem; }
 
+/* ------------------------------------------------ Original / Enhanced */
+.mode-toggle {
+  position: absolute; top: 1rem; right: 1rem; z-index: 5;
+  display: inline-flex; border: 1px solid var(--rule); border-radius: 999px;
+  overflow: hidden; background: var(--paper-2); box-shadow: 0 1px 2px var(--shadow);
+}
+.mode-toggle button {
+  font-family: var(--serif-body); font-size: .68rem; text-transform: uppercase;
+  letter-spacing: .1em; border: none; background: transparent; color: var(--ink-soft);
+  padding: .45rem .85rem; cursor: pointer; min-height: 38px;
+}
+.mode-toggle button:hover { color: var(--red); }
+.mode-toggle button[aria-pressed="true"] { background: var(--red); color: #fff; }
+
+/* mode visibility: html[data-mode] drives the index; .recipe[data-view] wins on a recipe */
+.only-enhanced { display: none; }
+html[data-mode="enhanced"] .only-enhanced { display: block; }
+html[data-mode="enhanced"] .only-original { display: none; }
+.recipe[data-view="original"] .only-original { display: block; }
+.recipe[data-view="original"] .only-enhanced { display: none; }
+.recipe[data-view="enhanced"] .only-enhanced { display: block; }
+.recipe[data-view="enhanced"] .only-original { display: none; }
+
+.view-tabs { display: flex; justify-content: center; gap: .4rem; margin: 0 0 1.2rem; }
+.view-tab {
+  font-family: var(--serif-body); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--ink-soft); text-decoration: none; border: 1px solid var(--rule); border-radius: 999px;
+  padding: .35rem .95rem; min-height: 38px; display: inline-flex; align-items: center;
+}
+.view-tab:hover { border-color: var(--red); color: var(--red); text-decoration: none; }
+.view-tab[aria-selected="true"], .view-tab[aria-selected="true"]:hover { background: var(--red); border-color: var(--red); color: #fff; }
+
+.recipe-intro { max-width: 60ch; margin: 0 auto 1.6rem; text-align: center; font-style: italic; color: var(--ink-soft); font-size: 1.06rem; }
+.photo-credit { text-align: center; font-size: .72rem; color: var(--ink-soft); margin: .45rem 0 0; font-style: italic; }
+.photo-credit a { color: var(--ink-soft); }
+
+.crosslinks { margin-top: 2.2rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+.crosslinks h3 { font-family: var(--serif-display); font-size: 1.05rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink); border-bottom: 2px solid var(--red); padding-bottom: .35rem; margin: 0 0 1rem; }
+.crosslinks ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem .7rem; }
+.crosslinks li a { display: inline-block; border: 1px solid var(--rule); border-radius: 999px; padding: .4rem 1rem; font-size: .92rem; color: var(--red); }
+.crosslinks li a:hover { border-color: var(--red); background: var(--red); color: #fff; text-decoration: none; }
+
 /* -------------------------------------------------------- responsive */
 @media (max-width: 720px) {
   .recipe-cols { grid-template-columns: 1fr; }
@@ -323,7 +365,8 @@ a:hover { color: var(--red-bright); text-decoration: underline; }
 /* ------------------------------------------------------------ print */
 @media print {
   body { background: #fff; color: #000; }
-  .topnav, .controls, .site-header .masthead-rule, .recipe-foot, .site-footer, .skip-link { display: none !important; }
+  .topnav, .controls, .site-header .masthead-rule, .recipe-foot, .site-footer, .skip-link,
+  .mode-toggle, .view-tabs { display: none !important; }
   .recipe { border: none; box-shadow: none; padding: 0; max-width: 7.2in; margin: 0 auto; background: transparent; }
   .method { max-width: 34em; }
   .recipe-photo { box-shadow: none; transform: none; }

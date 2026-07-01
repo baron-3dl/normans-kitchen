@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Easy Cheesy Lemon Bars — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Easy Cheesy Lemon Bars (Cookies &amp; Bars) — Pillsbury Lemon Plus Cake Mix, margarine, egg, Filling, Ready to Spread Lemon Frosting, 8 oz. cream cheese, softened….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Cookies%20%26%20Bars">Cookies &amp; Bars</a></p>
+    
     <h1 class="recipe-title">Easy Cheesy Lemon Bars</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -57,17 +61,26 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Preheat oven top 350 degrees. Grease and flour pan.</li>
 <li>In a large bowl, combine all base ingredients at low speed until crumbly, press in pan.</li>
 <li>In small bowl combine frosting, cream cheese and egg a low speed until well blended, beat at highest speed until smooth.</li>
 <li>Stir in nuts, spread over base.</li>
 <li>Bake at 350 degrees 40 to 50 minutes or until firm.</li>
 <li>Chill 2 hours before serving. Cut into bars.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Preheat oven top 350 degrees. Grease and flour pan.</li>
+<li>In a large bowl, combine all base ingredients at low speed until crumbly, press in pan.</li>
+<li>In small bowl combine frosting, cream cheese and egg a low speed until well blended, beat at highest speed until smooth.</li>
+<li>Stir in nuts, spread over base.</li>
+<li>Bake at 350 degrees 40 to 50 minutes or until firm.</li>
+<li>Chill 2 hours before serving. Cut into bars.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/easy-cheesy-lemon-bars.html</p>
     <div class="recipe-foot">
@@ -82,6 +95,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

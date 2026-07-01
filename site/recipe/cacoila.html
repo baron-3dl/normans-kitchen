@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cacoila — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Cacoila (Pork) — pork butt or pork shoulder (cut in chunks), paprika, crushed red pepper seeds, salt and pepper, garlic, can of beer.">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Pork">Pork</a></p>
+    
     <h1 class="recipe-title">Cacoila</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -55,10 +59,12 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol><li class="single-block">Cook in slow pot all day on low.</li></ol>
+        <div class="only-original"><ol><li class="single-block">Cook in slow pot all day on low.</li></ol></div>
+        <div class="only-enhanced"><ol><li class="single-block">Cook in slow pot all day on low.</li></ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/cacoila.html</p>
     <div class="recipe-foot">
@@ -73,6 +79,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

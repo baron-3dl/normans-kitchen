@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pasta with Four-Cheese Sauce — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Pasta with Four-Cheese Sauce (Pasta) — dry noodles (penne, rotelle, etc), Wondra quick mixing flour tortillas, low fat milk (can use whole milk), minced garlic….">
@@ -11,9 +12,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://baron-3dl.github.io/normans-kitchen/recipe/pasta-with-four-cheese-sauce.html">
 <meta property="og:site_name" content="Poppa&#x27;s Recipes">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/pasta-with-four-cheese-sauce.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pasta with Four-Cheese Sauce — Poppa&#x27;s Recipes">
 <meta name="twitter:description" content="Poppa&#x27;s recipe for Pasta with Four-Cheese Sauce (Pasta) — dry noodles (penne, rotelle, etc), Wondra quick mixing flour tortillas, low fat milk (can use whole milk), minced garlic….">
+<meta name="twitter:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/pasta-with-four-cheese-sauce.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +28,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +37,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Pasta">Pasta</a></p>
+    <div class="view-tabs" role="tablist" aria-label="Recipe view"><a class="view-tab" data-view="enhanced" href="#" role="tab">Enhanced</a><a class="view-tab" data-view="original" href="#" role="tab">Original</a></div>
     <h1 class="recipe-title">Pasta with Four-Cheese Sauce</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     
+    <div class="only-enhanced recipe-photo-slot"><img class="recipe-photo" src="../images/web/pasta-with-four-cheese-sauce.jpg" alt="Pasta with Four-Cheese Sauce" loading="lazy"><p class="photo-credit">Photo: <a href="https://www.flickr.com/photos/14052355@N04/2530861144" target="_blank" rel="noopener">docbaty</a> (CC BY 2.0)</p></div>
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -58,14 +64,20 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Cook noodle in salted boiling water until just tender (about 10 minutes) Drain and set aside.</li>
 <li>Add flour to small nonstick saucepan. Slowly stir in 1/4 cup of the milk and stir until smooth. Slowly stir in remaining milk. Heat mixture over medium low heat, stirring constantly until just beginning to thicken (about 2 minutes).</li>
 <li>Add garlic, Parmesan, Swiss cheese, cream cheese and blue cheese to saucepan with milk mixture. Continue to cook over low heat, stirring constantly until all ingredients are melted and mixture is reasonably smooth. If it is too thick, add a tablespoon or two of milk and stir. Add white or black pepper to taste.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Cook noodle in salted boiling water until just tender (about 10 minutes) Drain and set aside.</li>
+<li>Add flour to small nonstick saucepan. Slowly stir in 1/4 cup of the milk and stir until smooth. Slowly stir in remaining milk. Heat mixture over medium low heat, stirring constantly until just beginning to thicken (about 2 minutes).</li>
+<li>Add garlic, Parmesan, Swiss cheese, cream cheese and blue cheese to saucepan with milk mixture. Continue to cook over low heat, stirring constantly until all ingredients are melted and mixture is reasonably smooth. If it is too thick, add a tablespoon or two of milk and stir. Add white or black pepper to taste.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/pasta-with-four-cheese-sauce.html</p>
     <div class="recipe-foot">
@@ -80,6 +92,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

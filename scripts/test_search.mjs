@@ -47,7 +47,7 @@ await page.click('.chip[data-cat="Beef"]');
 await page.waitForTimeout(120);
 const beef = await visible();
 const allBeef = await page.locator('.card:visible').evaluateAll(
-  els => els.every(e => e.getAttribute('data-category') === 'Beef'));
+  els => els.every(e => (e.getAttribute('data-categories')||'').split('|').includes('Beef')));
 check(`Beef chip shows only Beef (${beef} cards, homogeneous=${allBeef})`, beef > 0 && allBeef);
 
 // chip + search compose
@@ -72,7 +72,7 @@ check(`no-results message appears for gibberish (${noRes})`, noRes);
 await page.goto(`${BASE}/index.html?c=${encodeURIComponent('Cookies & Bars')}`);
 await page.waitForTimeout(200);
 const deepHomogeneous = await page.locator('.card:visible').evaluateAll(
-  els => els.length > 0 && els.every(e => e.getAttribute('data-category') === 'Cookies & Bars'));
+  els => els.length > 0 && els.every(e => (e.getAttribute('data-categories')||'').split('|').includes('Cookies & Bars')));
 check(`?c=Cookies & Bars deep-link pre-filters`, deepHomogeneous);
 
 // a folded alternate can still be searched from the index (union signature)
@@ -107,6 +107,30 @@ check(`old alternate URL redirects to dish page (${page.url()})`, /meat-pie\.htm
 check(`redirect preselects the right version`, /#v-french-meat-pie/.test(page.url()));
 const afterRedirect = await page.locator('.version:visible').getAttribute('id');
 check(`redirected version is shown (${afterRedirect})`, afterRedirect === 'v-french-meat-pie');
+
+// --- Original / Enhanced mode toggle ---
+await page.goto(`${BASE}/index.html`);
+await page.waitForTimeout(150);
+const mode0 = await page.evaluate(() => document.documentElement.getAttribute('data-mode'));
+check(`default mode is original (${mode0})`, mode0 === 'original');
+await page.click('.mode-toggle [data-mode="enhanced"]');
+await page.waitForTimeout(150);
+const mode1 = await page.evaluate(() => document.documentElement.getAttribute('data-mode'));
+check(`header toggle sets enhanced (${mode1})`, mode1 === 'enhanced');
+const enhImgs = await page.locator('.card-photo.only-enhanced:visible img').count();
+check(`enhanced-mode web photos become visible (${enhImgs})`, enhImgs > 0);
+const origVisible = await page.locator('.card-photo.only-original:visible').count();
+check(`original-only photos hidden in enhanced mode (${origVisible})`, origVisible === 0);
+await page.goto(`${BASE}/recipe/swiss-steak.html`);
+await page.waitForTimeout(150);
+const persisted = await page.evaluate(() => document.documentElement.getAttribute('data-mode'));
+check(`mode persists across pages (${persisted})`, persisted === 'enhanced');
+const view0 = await page.locator('.recipe').first().getAttribute('data-view');
+check(`recipe view follows global mode (${view0})`, view0 === 'enhanced');
+await page.click('.view-tab[data-view="original"]');
+await page.waitForTimeout(120);
+const view1 = await page.locator('.recipe').first().getAttribute('data-view');
+check(`per-recipe tab flips to original (${view1})`, view1 === 'original');
 
 await browser.close();
 console.log(`\n${failures === 0 ? 'ALL PASSED' : failures + ' FAILED'}`);

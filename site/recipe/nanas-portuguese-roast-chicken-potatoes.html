@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nana&#x27;s Portuguese Roast Chicken &amp; Potatoes — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Nana&#x27;s Portuguese Roast Chicken &amp; Potatoes (Chicken &amp; Poultry) — water, good red wine vinegar, paprika, salt, fresh ground pepper, onion chopped, tomato, chopped, fresh chopped parsley….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Chicken%20%26%20Poultry">Chicken &amp; Poultry</a></p>
+    
     <h1 class="recipe-title">Nana&#x27;s Portuguese Roast Chicken &amp; Potatoes</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -59,10 +63,12 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol><li class="single-block">Preheat oven to 375 degrees. Pour water into roasting pan. Add vinegar to taste. The water should have just a hint of vinegary taste. Sprinkle paprika over the water and mix, removing the lumps. Add salt, pepper, onion, tomato, parsley and potatoes. Before cooking add chorizo. Bake for 2 hours. Do not cover potatoes because they will steam and not roast. The potatoes will have a nice red color when they are done.</li></ol>
+        <div class="only-original"><ol><li class="single-block">Preheat oven to 375 degrees. Pour water into roasting pan. Add vinegar to taste. The water should have just a hint of vinegary taste. Sprinkle paprika over the water and mix, removing the lumps. Add salt, pepper, onion, tomato, parsley and potatoes. Before cooking add chorizo. Bake for 2 hours. Do not cover potatoes because they will steam and not roast. The potatoes will have a nice red color when they are done.</li></ol></div>
+        <div class="only-enhanced"><ol><li class="single-block">Preheat oven to 375 degrees. Pour water into roasting pan. Add vinegar to taste. The water should have just a hint of vinegary taste. Sprinkle paprika over the water and mix, removing the lumps. Add salt, pepper, onion, tomato, parsley and potatoes. Before cooking add chorizo. Bake for 2 hours. Do not cover potatoes because they will steam and not roast. The potatoes will have a nice red color when they are done.</li></ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/nanas-portuguese-roast-chicken-potatoes.html</p>
     <div class="recipe-foot">
@@ -77,6 +83,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

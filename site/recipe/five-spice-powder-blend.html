@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Five Spice Powder Blend — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Five Spice Powder Blend (Sauces &amp; Seasonings) — anise seeds, crushed, freshly ground pepper, fennel seeds, crushed, ground cloves, ground ginger, ground cinnamon….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +35,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Sauces%20%26%20Seasonings">Sauces &amp; Seasonings</a></p>
+    
     <h1 class="recipe-title">Five Spice Powder Blend</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     <p class="recipe-servings">Makes 1/4 cup</p>
+    
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -56,10 +60,12 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol><li class="single-block">Combine all ingredients; store in an airtight container. Use to flavor fish or pork.</li></ol>
+        <div class="only-original"><ol><li class="single-block">Combine all ingredients; store in an airtight container. Use to flavor fish or pork.</li></ol></div>
+        <div class="only-enhanced"><ol><li class="single-block">Combine all ingredients; store in an airtight container. Use to flavor fish or pork.</li></ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/five-spice-powder-blend.html</p>
     <div class="recipe-foot">
@@ -74,6 +80,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

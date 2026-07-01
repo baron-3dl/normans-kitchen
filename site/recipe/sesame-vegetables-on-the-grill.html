@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sesame Vegetables on the Grill — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Sesame Vegetables on the Grill (Vegetables) — onions, ell pepper, fresh broccoli florets, 8 oz sliced mushrooms, soy sauce, peanut or vegetable oil, sesame seeds.">
@@ -11,9 +12,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://baron-3dl.github.io/normans-kitchen/recipe/sesame-vegetables-on-the-grill.html">
 <meta property="og:site_name" content="Poppa&#x27;s Recipes">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/sesame-vegetables-on-the-grill.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sesame Vegetables on the Grill — Poppa&#x27;s Recipes">
 <meta name="twitter:description" content="Poppa&#x27;s recipe for Sesame Vegetables on the Grill (Vegetables) — onions, ell pepper, fresh broccoli florets, 8 oz sliced mushrooms, soy sauce, peanut or vegetable oil, sesame seeds.">
+<meta name="twitter:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/sesame-vegetables-on-the-grill.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +28,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +37,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Vegetables">Vegetables</a></p>
+    <div class="view-tabs" role="tablist" aria-label="Recipe view"><a class="view-tab" data-view="enhanced" href="#" role="tab">Enhanced</a><a class="view-tab" data-view="original" href="#" role="tab">Original</a></div>
     <h1 class="recipe-title">Sesame Vegetables on the Grill</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     
+    <div class="only-enhanced recipe-photo-slot"><img class="recipe-photo" src="../images/web/sesame-vegetables-on-the-grill.jpg" alt="Sesame Vegetables on the Grill" loading="lazy"><p class="photo-credit">Photo: <a href="https://www.flickr.com/photos/29946035@N08/3803634285" target="_blank" rel="noopener">koadmunkee</a> (CC BY 2.0)</p></div>
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -56,15 +62,22 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Turn on grill to high.</li>
 <li>Peel the onions and cut them in half. Slice each half into crescent shaped slices 1/4 inch thick. Place the slices into a large size foil grilling bag. Seed and rinse the bell pepper and cut it in half. Cut each half into 1/4 inch strips, and add them to the bag. Add the broccoli and mushrooms to the bag.</li>
 <li>Pour the soy sauce and oil into a 2 cup glass measure and whisk to combine. Pour the mixture over the vegetables. Sprinkle in he sesame seeds. Fold the top of the bag to close it securely, and shake the bag to mix well.</li>
 <li>Place the bag flat on the grill, making sure vegetables are evenly distributed, and cook until the broccoli is crisp tender, 8 to 10 minutes. Remove to a supporting pan, and use oven mitts to cut open foil bag wit a sharp knife. Carefully fold back top of foil bag allowing steam to escape. Serve at once.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Turn on grill to high.</li>
+<li>Peel the onions and cut them in half. Slice each half into crescent shaped slices 1/4 inch thick. Place the slices into a large size foil grilling bag. Seed and rinse the bell pepper and cut it in half. Cut each half into 1/4 inch strips, and add them to the bag. Add the broccoli and mushrooms to the bag.</li>
+<li>Pour the soy sauce and oil into a 2 cup glass measure and whisk to combine. Pour the mixture over the vegetables. Sprinkle in he sesame seeds. Fold the top of the bag to close it securely, and shake the bag to mix well.</li>
+<li>Place the bag flat on the grill, making sure vegetables are evenly distributed, and cook until the broccoli is crisp tender, 8 to 10 minutes. Remove to a supporting pan, and use oven mitts to cut open foil bag wit a sharp knife. Carefully fold back top of foil bag allowing steam to escape. Serve at once.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/sesame-vegetables-on-the-grill.html</p>
     <div class="recipe-foot">
@@ -79,6 +92,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

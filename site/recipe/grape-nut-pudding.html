@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Grape Nut Pudding — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Grape Nut Pudding (Desserts, Pies &amp; Cakes) — eggs, slightly beaten, sugar, salt, vanilla, milk, scalded, grape nuts, butter.">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +35,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Desserts%2C%20Pies%20%26%20Cakes">Desserts, Pies &amp; Cakes</a></p>
+    
     <h1 class="recipe-title">Grape Nut Pudding</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     <p class="recipe-servings">Makes 6 servings</p>
+    
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -56,15 +60,22 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Combine eggs, sugar, salt and vanilla. Add milk gradually mixing thoroughly.</li>
 <li>Pour into custard cups. Sprinkle grape nut on custard mixture in cups and dot with butter.</li>
 <li>Place cups in pan of hot water and bake in moderate oven 375 degrees for 25 minutes or until knife inserted in center comes out clean. Makes 6 servings.</li>
 <li>NOTE butter maybe melted and combined with grape nuts before sprinkling on custard.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Combine eggs, sugar, salt and vanilla. Add milk gradually mixing thoroughly.</li>
+<li>Pour into custard cups. Sprinkle grape nut on custard mixture in cups and dot with butter.</li>
+<li>Place cups in pan of hot water and bake in moderate oven 375 degrees for 25 minutes or until knife inserted in center comes out clean. Makes 6 servings.</li>
+<li>NOTE butter maybe melted and combined with grape nuts before sprinkling on custard.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/grape-nut-pudding.html</p>
     <div class="recipe-foot">
@@ -79,6 +90,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

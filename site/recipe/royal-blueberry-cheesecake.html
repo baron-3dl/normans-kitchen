@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Royal Blueberry Cheesecake — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Royal Blueberry Cheesecake (Desserts, Pies &amp; Cakes) — blueberries, drained, eggs, milk, 8 oz cream cheese, sugar, vanilla, graham cracker crumbs, cinnamon, margarine, melted….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Desserts%2C%20Pies%20%26%20Cakes">Desserts, Pies &amp; Cakes</a></p>
+    
     <h1 class="recipe-title">Royal Blueberry Cheesecake</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -60,15 +64,22 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Mix all crust ingredients. Place 1/2 cup mixture in a heavily greased spring form pan 9 or 10 inches. Turn pan on side pressing mixture up sides of pan and then coat the bottom, continue until all of pan is coated. Bake 10 minutes at 350 degrees. Cool</li>
 <li>Place blueberries in bottom of pan Using medium speed on mixer blend all ingredients except blueberries together.</li>
 <li>Pour into pan and bake 30 minutes at 350 degrees for 30 minutes.</li>
 <li>Mix together 1 pint sour cream, 1 tsp vanilla, 1/4 cup sugar, and pour over hot cake. Bake 10 minutes more. Cool overnight before removing from pan.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Mix all crust ingredients. Place 1/2 cup mixture in a heavily greased spring form pan 9 or 10 inches. Turn pan on side pressing mixture up sides of pan and then coat the bottom, continue until all of pan is coated. Bake 10 minutes at 350 degrees. Cool</li>
+<li>Place blueberries in bottom of pan Using medium speed on mixer blend all ingredients except blueberries together.</li>
+<li>Pour into pan and bake 30 minutes at 350 degrees for 30 minutes.</li>
+<li>Mix together 1 pint sour cream, 1 tsp vanilla, 1/4 cup sugar, and pour over hot cake. Bake 10 minutes more. Cool overnight before removing from pan.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/royal-blueberry-cheesecake.html</p>
     <div class="recipe-foot">
@@ -83,6 +94,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

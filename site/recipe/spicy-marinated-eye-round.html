@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spicy Marinated Eye Round — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Spicy Marinated Eye Round (Beef) — Eye Round, onions sliced, salt, pepper, SPICY SAUCE, ketchup, water, onions, sliced, wine vinegar, brown sugar….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Beef">Beef</a></p>
+    
     <h1 class="recipe-title">Spicy Marinated Eye Round</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -69,15 +73,22 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Place roast in pan, add onions, salt and pepper. Bake covered at 325 degrees for 3 hours and 30 minutes. Cool and slice thinly.</li>
 <li>Place roast in casserole dish, add spicy sauce, cover and chill for 8 hours. When ready remove from fridge and let stand for 30 minutes. Bake at 350 degrees for 45 minutes.</li>
 <li>SPICY SAUCE</li>
 <li>Bring all ingredients to a boil, reduce heat and simmer 1 hour. Remove Bay leaf.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Place roast in pan, add onions, salt and pepper. Bake covered at 325 degrees for 3 hours and 30 minutes. Cool and slice thinly.</li>
+<li>Place roast in casserole dish, add spicy sauce, cover and chill for 8 hours. When ready remove from fridge and let stand for 30 minutes. Bake at 350 degrees for 45 minutes.</li>
+<li>SPICY SAUCE</li>
+<li>Bring all ingredients to a boil, reduce heat and simmer 1 hour. Remove Bay leaf.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/spicy-marinated-eye-round.html</p>
     <div class="recipe-foot">
@@ -92,6 +103,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

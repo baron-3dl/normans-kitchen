@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chicken of the Islands Tangy — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Chicken of the Islands Tangy (Chicken &amp; Poultry) — vinegar, soy sauce, chicken, garlic minced, fresh pepper.">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Chicken%20%26%20Poultry">Chicken &amp; Poultry</a></p>
+    
     <h1 class="recipe-title">Chicken of the Islands Tangy</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -54,10 +58,12 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol><li class="single-block">Put vinegar, soy sauce, garlic, pepper in skillet, add chicken, let marinate for 30 minutes, turn once or twice. Heat to boil on top of stove. Cover, lower heat to simmer about 40 minutes. Marinade will be absorbed.</li></ol>
+        <div class="only-original"><ol><li class="single-block">Put vinegar, soy sauce, garlic, pepper in skillet, add chicken, let marinate for 30 minutes, turn once or twice. Heat to boil on top of stove. Cover, lower heat to simmer about 40 minutes. Marinade will be absorbed.</li></ol></div>
+        <div class="only-enhanced"><ol><li class="single-block">Put vinegar, soy sauce, garlic, pepper in skillet, add chicken, let marinate for 30 minutes, turn once or twice. Heat to boil on top of stove. Cover, lower heat to simmer about 40 minutes. Marinade will be absorbed.</li></ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/chicken-of-the-islands-tangy.html</p>
     <div class="recipe-foot">
@@ -72,6 +78,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cheesy Macaroni Divan — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Cheesy Macaroni Divan (Pasta) — uncooked elbow macaroni, margarine or butter, flour, skim milk, Dijon mustard, shredded sharp Cheddar cheese….">
@@ -25,6 +26,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,11 +35,13 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Pasta">Pasta</a></p>
+    
     <h1 class="recipe-title">Cheesy Macaroni Divan</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
+    
     
     
     
@@ -58,15 +62,22 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Bring a large pot of water to boil and cook the macaroni for 7 to 9 minutes, or until it reaches the desired tenderness.</li>
 <li>Meanwhile, in a 2 quart or larger saucepan, melt the margarine over medium heat. Add the flour and cook, stirring constantly for 1 minute as the mixture forms a paste. Add the milk slowly, stirring constantly, and cook for 3 minutes until the milk thickens slightly. Do not let milk boil. You may have a few lumps. Ignore them. Add the mustard and the cheese, stiring until the cheese sauce is smooth. Drain the chicken and add it to the cheese sauce, flaking it with your fingers as you add it. Remove the sauce from the heat until the macaroni is done.</li>
 <li>Meanwhile, rinse the broccoli off with cool water and put it in a microwave safe container. Cover and microwave for 3 minutes at high. Set aside.</li>
 <li>When the macaroni is just tender, remove it from the heat and drain thoroughly. Pour the drained macaroni back into the pasta pot. Drain the broccoli if necessary, and pour it into pasta pot. Add the cheese sauce and stir to mix well. Season with black pepper to taste. Serve.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Bring a large pot of water to boil and cook the macaroni for 7 to 9 minutes, or until it reaches the desired tenderness.</li>
+<li>Meanwhile, in a 2 quart or larger saucepan, melt the margarine over medium heat. Add the flour and cook, stirring constantly for 1 minute as the mixture forms a paste. Add the milk slowly, stirring constantly, and cook for 3 minutes until the milk thickens slightly. Do not let milk boil. You may have a few lumps. Ignore them. Add the mustard and the cheese, stiring until the cheese sauce is smooth. Drain the chicken and add it to the cheese sauce, flaking it with your fingers as you add it. Remove the sauce from the heat until the macaroni is done.</li>
+<li>Meanwhile, rinse the broccoli off with cool water and put it in a microwave safe container. Cover and microwave for 3 minutes at high. Set aside.</li>
+<li>When the macaroni is just tender, remove it from the heat and drain thoroughly. Pour the drained macaroni back into the pasta pot. Drain the broccoli if necessary, and pour it into pasta pot. Add the cheese sauce and stir to mix well. Season with black pepper to taste. Serve.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/cheesy-macaroni-divan.html</p>
     <div class="recipe-foot">
@@ -81,6 +92,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>

@@ -21,8 +21,8 @@
     var shown = 0;
     cards.forEach(function (card) {
       var hay = card.getAttribute("data-search") || "";
-      var cat = card.getAttribute("data-category") || "";
-      var okCat = !activeCat || cat === activeCat;
+      var cats = (card.getAttribute("data-categories") || "").split("|");
+      var okCat = !activeCat || cats.indexOf(activeCat) !== -1;
       var okText = terms.every(function (t) { return hay.indexOf(t) !== -1; });
       var visible = okCat && okText;
       card.style.display = visible ? "" : "none";

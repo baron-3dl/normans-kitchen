@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Poppa — Poppa&#x27;s Recipes</title>
 <meta name="description" content="About Poppa — the cook behind the recipes.">
@@ -24,6 +25,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <div class="masthead-rule"><span>&#10022;</span></div>
   <p class="wordmark"><a href="index.html">Poppa&#x27;s Recipes</a></p>
   <p class="tagline">recipes worth keeping</p>
@@ -46,10 +48,8 @@
     some passed down, some his own invention. Together they're a portrait of a man who fed his family
     with his hands and his heart.</p>
     <p>Write a few paragraphs here about who Poppa was — where he cooked, the dishes people asked
-    for again and again, the holidays, the kitchen he stood in. This is the part of the site that
-    turns a list of recipes into a keepsake.</p>
-    <p style="text-align:center; font-style:italic; color:var(--red); margin-top:2rem;">
-    “Recipes worth keeping.”</p>
+    for again and again, the holidays, the kitchen he stood in.</p>
+    <p style="text-align:center; font-style:italic; color:var(--red); margin-top:2rem;">“Recipes worth keeping.”</p>
   </article>
 </main>
 <footer class="site-footer">
@@ -58,5 +58,6 @@
   <p><a href="index.html">All Recipes</a> &nbsp;·&nbsp; <a href="about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="assets/mode.js"></script>
 </body>
 </html>

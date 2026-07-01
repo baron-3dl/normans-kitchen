@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="original">
 <head>
 <meta charset="utf-8">
+<script>try{document.documentElement.setAttribute('data-mode',localStorage.getItem('nk-mode')||'original')}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brine Chicken — Poppa&#x27;s Recipes</title>
 <meta name="description" content="Poppa&#x27;s recipe for Brine Chicken (Chicken &amp; Poultry) — chicken breasts, halves, course salt, firmly packed dark brown sugar, black peppercorns, red chilly pepper thinly sliced….">
@@ -11,9 +12,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://baron-3dl.github.io/normans-kitchen/recipe/brine-chicken.html">
 <meta property="og:site_name" content="Poppa&#x27;s Recipes">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/brine-chicken.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Brine Chicken — Poppa&#x27;s Recipes">
 <meta name="twitter:description" content="Poppa&#x27;s recipe for Brine Chicken (Chicken &amp; Poultry) — chicken breasts, halves, course salt, firmly packed dark brown sugar, black peppercorns, red chilly pepper thinly sliced….">
+<meta name="twitter:image" content="https://baron-3dl.github.io/normans-kitchen/images/web/brine-chicken.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +28,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header compact">
 <div class="wrap">
+  <div class="mode-toggle" role="group" aria-label="View mode"><button type="button" data-mode="original" aria-pressed="true">Original</button><button type="button" data-mode="enhanced" aria-pressed="false">Enhanced</button></div>
   <p class="wordmark small"><a href="../index.html">Poppa&#x27;s Recipes</a></p>
   <nav class="topnav" aria-label="Primary">
   <a href="../index.html">All Recipes</a>
@@ -33,13 +37,15 @@
 </div>
 </header>
 <main id="main" class="wrap">
-  <article class="recipe">
+  <article class="recipe" data-view="original">
     <p class="breadcrumb"><a href="../index.html">Poppa's Recipes</a> &nbsp;/&nbsp; <a href="../index.html?c=Chicken%20%26%20Poultry">Chicken &amp; Poultry</a></p>
+    <div class="view-tabs" role="tablist" aria-label="Recipe view"><a class="view-tab" data-view="enhanced" href="#" role="tab">Enhanced</a><a class="view-tab" data-view="original" href="#" role="tab">Original</a></div>
     <h1 class="recipe-title">Brine Chicken</h1>
     <div class="recipe-rule"></div>
     <section class="version single">
     
     
+    <div class="only-enhanced recipe-photo-slot"><img class="recipe-photo" src="../images/web/brine-chicken.jpg" alt="Brine Chicken" loading="lazy"><p class="photo-credit">Photo: <a href="https://commons.wikimedia.org/w/index.php?curid=68141602" target="_blank" rel="noopener">Lexlex</a> (CC BY-SA 4.0)</p></div>
     
     <div class="recipe-cols">
       <aside class="ingredients">
@@ -60,14 +66,20 @@
       </aside>
       <div class="method">
         <h3>Directions</h3>
-        <ol>
+        <div class="only-original"><ol>
 <li>Rinse chicken under cold, running water and blot dry with paper towels. Arrange in a noncreative baking dish.</li>
 <li>Make the brine: Place the salt, brown sugar, peppercorns, chili pepper and bay leaves in a large, noncreative bowl, Add the hot water, then whisk until the salt and brown sugar dissolve; stir in cold water. Let brine come to room temperature. Pour over the chicken and stir in the lemon slices, onion and garlic. Cover the dish with plastic wrap and let stand in the refrigerator for 2 hours, turning the chicken once or twice.</li>
 <li>Preheat the grill until coals are hot. When ready to cook, brush and oil the grate. Arrange the breasts on the hot grate, all facing the same direction, at a 45 degree angle to the bars of the grate. Cook the chicken over high heat, 4 to 6 minutes per side, rotating the breasts 90 degrees after 2 minutes on each side to create an attractive crosshatch of grill marks. (To test for doneness, remove a breast from grill and poke the thickest part with your finger. It should feel firm to the touch. Transfer the chicken to a decorative platter and serve.</li>
-</ol>
+</ol></div>
+        <div class="only-enhanced"><ol>
+<li>Rinse chicken under cold, running water and blot dry with paper towels. Arrange in a noncreative baking dish.</li>
+<li>Make the brine: Place the salt, brown sugar, peppercorns, chili pepper and bay leaves in a large, noncreative bowl, Add the hot water, then whisk until the salt and brown sugar dissolve; stir in cold water. Let brine come to room temperature. Pour over the chicken and stir in the lemon slices, onion and garlic. Cover the dish with plastic wrap and let stand in the refrigerator for 2 hours, turning the chicken once or twice.</li>
+<li>Preheat the grill until coals are hot. When ready to cook, brush and oil the grate. Arrange the breasts on the hot grate, all facing the same direction, at a 45 degree angle to the bars of the grate. Cook the chicken over high heat, 4 to 6 minutes per side, rotating the breasts 90 degrees after 2 minutes on each side to create an attractive crosshatch of grill marks. (To test for doneness, remove a breast from grill and poke the thickest part with your finger. It should feel firm to the touch. Transfer the chicken to a decorative platter and serve.</li>
+</ol></div>
         
       </div>
     </div>
+    
   </section>
     <p class="print-source">https://baron-3dl.github.io/normans-kitchen/recipe/brine-chicken.html</p>
     <div class="recipe-foot">
@@ -82,6 +94,7 @@
   <p><a href="../index.html">All Recipes</a> &nbsp;·&nbsp; <a href="../about.html">About Poppa</a></p>
 </div>
 </footer>
+<script src="../assets/mode.js"></script>
+<script src="../assets/recipe.js"></script>
 </body>
 </html>
-<script src="../assets/recipe.js"></script>
