@@ -44,8 +44,9 @@ note), then run `python3 scripts/build_site.py` to rebuild the pages.
 
 ## The About page
 
-`site/about.html` ships with placeholder text. Replace it with Poppa's real story, and
-drop a photo at `site/images/poppa.jpg` (then point the photo frame in `about.html` at it).
+The About page shows Poppa's photo (`site/images/poppa.jpg`) in the photo frame. The
+written story is still placeholder text — replace it in `build_about()` in
+`scripts/build_site.py`, then rebuild.
 
 ## Testing
 
