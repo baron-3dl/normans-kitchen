@@ -300,6 +300,8 @@ a:hover { color: var(--red-bright); text-decoration: underline; }
   background: #e9dcc0; aspect-ratio: 4/5;
   display: flex; align-items: center; justify-content: center; color: var(--ink-soft); font-style: italic; text-align: center;
 }
+.about-photo.has-photo { aspect-ratio: auto; background: none; padding: 0; }
+.about-photo.has-photo img { display: block; width: 100%; height: auto; }
 .about h1 { font-family: var(--serif-display); font-size: clamp(2rem,6vw,3rem); text-align: center; margin: 0 0 .3rem; }
 .about p { font-size: 1.1rem; }
 .about .placeholder-note { background: rgba(179,39,27,.06); border-left: 3px solid var(--red); padding: .8rem 1rem; font-size: .92rem; font-style: italic; color: var(--ink-soft); }

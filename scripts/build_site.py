@@ -536,9 +536,10 @@ class Site:
   <article class="about">
     <h1>About Poppa</h1>
     <div class="recipe-rule"></div>
-    <div class="about-photo">A photo of Poppa<br>goes here</div>
-    <p class="placeholder-note">This page is a placeholder — replace the text below (and drop a photo
-    into <code>site/images/poppa.jpg</code>, then point the photo frame at it) with Poppa's real story.</p>
+    <figure class="about-photo has-photo">
+      <img src="images/poppa.jpg" alt="Poppa in the kitchen in the 1950s, grinning with batter on his face and hand beside a big mixing bowl" width="760" height="872">
+    </figure>
+    <p class="placeholder-note">The story below is still placeholder text — replace it with Poppa's real story.</p>
     <p>Every recipe on this site came from Poppa's kitchen — collected over the years, cooked for
     the people he loved, and written down so they'd never be lost. Some are clipped from magazines,
     some passed down, some his own invention. Together they're a portrait of a man who fed his family
