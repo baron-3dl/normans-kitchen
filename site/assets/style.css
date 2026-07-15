@@ -142,6 +142,7 @@ a:hover { color: var(--red-bright); text-decoration: underline; }
 .result-meta {
   text-align: center; color: var(--ink-soft); font-style: italic;
   margin: 1.4rem 0 .4rem; font-size: .95rem; min-height: 1.4em;
+  scroll-margin-top: 1rem; /* breathing room when search.js scrolls results into view */
 }
 
 /* -------------------------------------------------------- section head */

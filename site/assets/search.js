@@ -44,14 +44,33 @@
     });
   }
 
+  // On mobile the wrapped filter chips fill the screen, so tapping one updates the
+  // grid below the fold and looks like nothing happened. Bring the results into view.
+  // Only when they're actually off-screen — on desktop the grid is already visible,
+  // so we don't yank the page around.
+  function revealResults() {
+    if (!grid) return;
+    // How many px of the grid are currently inside the viewport. When the filters
+    // fill the screen (as on phones) this is ~0 or negative, so a tap looks like
+    // nothing happened; on desktop a row of cards is usually already showing.
+    var visibleGrid = window.innerHeight - grid.getBoundingClientRect().top;
+    if (visibleGrid < 120) {
+      var anchor = meta || grid;
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      anchor.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    }
+  }
+
   chips.forEach(function (chip) {
-    chip.addEventListener("click", function () {
+    chip.addEventListener("click", function (e) {
       var cat = chip.getAttribute("data-cat") || "";
       if (activeCat === cat) { activeCat = ""; } else { activeCat = cat; }
       chips.forEach(function (c) {
         c.setAttribute("aria-pressed", c.getAttribute("data-cat") === activeCat ? "true" : "false");
       });
       apply();
+      // Only for genuine taps — not the programmatic deep-link click below.
+      if (e && e.isTrusted) revealResults();
     });
   });
 
