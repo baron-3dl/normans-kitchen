@@ -24,7 +24,7 @@ SITE = ROOT / "site"
 
 SITE_TITLE = "Poppa's Recipes"
 TAGLINE = "recipes worth keeping"
-BASE_URL = "https://baron-3dl.github.io/normans-kitchen"
+BASE_URL = "https://lizotte.cool"
 PATH_PREFIX = (urlsplit(BASE_URL).path.rstrip("/") or "") + "/"
 
 CATEGORIES = [
@@ -597,6 +597,8 @@ class Site:
             f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{items}\n</urlset>\n', encoding="utf-8")
         (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n", encoding="utf-8")
         (SITE / ".nojekyll").write_text("", encoding="utf-8")
+        # Custom domain for GitHub Pages (apex). Served from the Pages artifact.
+        (SITE / "CNAME").write_text(urlsplit(BASE_URL).netloc + "\n", encoding="utf-8")
 
         n_alt = len(self.alt_of)
         print(f"Built: {len(self.recipes)-n_alt} cards from {len(self.recipes)} recipes | "
